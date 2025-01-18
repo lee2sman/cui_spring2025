@@ -1,23 +1,30 @@
+@charset "UTF-8";
+/** Reset some basic elements */
+@import url("https://fonts.googleapis.com/css?family=Bitter&display=swap");
+
+html { 
+  background-size: 100% 100%; 
+}
+
 body {
-  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  font: 400 15.3px/1.6 "Bitter", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", "Bitter", sans-serif; 
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Lucida Console, monospace; 
   font-weight: 400;
   font-size: 21px!important;
   line-height: 1.58;
   letter-spacing: -.003em;
-  width: 90vh;
-  margin: 29px auto;
+  margin: auto;
   /* padding-left: 5vw!important; */
   color: #220095;
   background-color: azure;
+  max-width: 50em;
 }
 
 h1 {
-  margin-top: 0;
   font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 36px;
-  margin-left: -2.25px;
   line-height: 1.15;
   letter-spacing: -.02em;
   /* color: rgba(0,0,0,.8); */
@@ -28,11 +35,9 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 39px;
   font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
   font-weight: 300;
   font-style: normal;
-  margin-left: -1.75px;
   line-height: 1.22;
   letter-spacing: -.022em;
   /* color: rgba(0,0,0,.44); */
@@ -54,8 +59,6 @@ h6 {
 }
 
 hr {
-  margin-top: 52px;
-  margin-bottom: 42px;
   border: 0;
   text-align: center;
 }
@@ -67,7 +70,6 @@ hr:before {
   letter-spacing: .6em;
   content: '...';
   display: inline-block;
-  margin-left: .6em;
   /* color: rgba(0,0,0,.6); */
   position: relative;
   top: -30px;
