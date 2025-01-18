@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="date" content="" />
+      <title>Week 8 - Bringing it all together - Complete functional
+application</title>
+      <link rel="stylesheet" href="../css/../css/cui.css" />
+
+      <meta property="og:title" content="Week 8 - Bringing it all
+together - Complete functional application" />
+            <meta property="og:description" content="This is a catch-up
+week where we will build a complete functional application and
+interface, using HTML, CSS and Javascript." />
+                  <meta property="og:type" content="article" />
+  </head>
+  <body>
+      <header> <nav>
+    <p><a href="..">←home</a><br />
+</nav> </footer>
+      <h1>Week 8 - Bringing it all together - Complete functional
+application</h1>
+      <p><em>Date: 2025-03-12</em></p>
+      <h2 id="overview">Overview</h2>
+      <ul>
+      <li>Bringing it all together: a complete functional application
+      and interface, using HTML, CSS and Javascript.</li>
+      </ul>
+      <h2 id="scripting-with-jquery">Scripting with jQuery</h2>
+      <p>This class is not meant to be an advanced Javascript scripting
+      course. Other classes including Scripting For The Web cover
+      scripting in much more detail.</p>
+      <p>We are using the jQuery library as a simpler interface to work
+      with Javascript in the browser. This lets us quickly create usable
+      scripts to trigger events and actions in our interfaces.</p>
+      <p>jQuery is a library. It can access and alter the DOM.</p>
+      <p>jQuery provides a beginner-friendly simplified approach to
+      scripting, including a CSS-like selector system. Our scripts can
+      respond to <em>events</em> such as button presses.</p>
+      <h3 id="getting-started-with-jquery">Getting started with
+      jQuery</h3>
+      <p>2 options:</p>
+      <ol type="1">
+      <li>Download the latest jQuery script and add it to your
+      project.</li>
+      <li>Use an online CDN (Content Delivery Network) by linking to a
+      copy of jQuery on a CDN online (at a url).</li>
+      </ol>
+      <p>Use the first option especially for offline apps. Use the
+      second option for speed. A user may have visited a previous site
+      that uses jQuery, so their browser will have cached the site,
+      allowing it to run faster. Additionally, jQuery is hosted on
+      servers around the world, so it should load quickly
+      everywhere.</p>
+      <h3 id="jquery-syntax">jQuery Syntax</h3>
+      <pre><code>$(selector).action();</code></pre>
+      <p>Let’s break this down</p>
+      <p><code>$</code> is the jQuery sign. It tells the browser we are
+      using jQuery to access/alter the page.</p>
+      <p><em>selector</em> is a reference to the html object we want to
+      alter. We can reference html tags, classes, IDs.</p>
+      <p><code>action()</code> here is a reference to a jQuery action.
+      These are builtin actions you can trigger.</p>
+      <p>Examples:</p>
+      <p><code>$("p").hide()</code> will hide all paragraphs on the
+      page.</p>
+      <p><code>$(".header").hide()</code> will hide any element on the
+      page with a .header class.</p>
+      <h5 id="best-practices---document.ready">Best practices -
+      document.ready()</h5>
+      <p>It is best practice to wait to have our jQuery scripts run
+      after all HTML content (such as text, images) has loaded.</p>
+      <p>To do this, we put our script inside a nested ready() event.
+      This means that our pages waits until it’s ready (all content is
+      loaded) before it triggers the rest of our jQuery code to run.</p>
+      <pre><code>$(document).ready(function(){
+  // this is a comment in Javascript/jQuery
+  // jQuery methods go here...
+});</code></pre>
+      <h5 id="jquery-selector-examples">jQuery selector examples</h5>
+      <pre><code>$(&quot;p.intro&quot;);</code></pre>
+      <p>Selects all <code>&lt;p&gt;</code> elements with
+      class=“intro”</p>
+      <pre><code>$(&quot;a[target=&#39;_blank&#39;]&quot;)</code></pre>
+      <p>Selects all <code>&lt;a&gt;</code> elements with a target
+      attribute value equal to “_blank”</p>
+      <p><em>more jQuery selector <a
+      href="https://www.w3schools.com/jquery/jquery_selectors.asp">examples</a></em></p>
+      <h3 id="jquery-events">jQuery Events</h3>
+      <p><strong>Any action a user can do on the page is called an
+      “event.” Our script responds to these user events.</strong></p>
+      <p>Mouse Events:</p>
+      <ul>
+      <li>click</li>
+      <li>dblclick</li>
+      <li>mouseenter</li>
+      <li>mouseleave</li>
+      </ul>
+      <p>Key Events:</p>
+      <ul>
+      <li>keypress</li>
+      <li>keydown</li>
+      <li>keyup</li>
+      </ul>
+      <p>Form Events:</p>
+      <ul>
+      <li>submit</li>
+      <li>change</li>
+      <li>focus</li>
+      <li>blur</li>
+      </ul>
+      <p>Window Events:</p>
+      <ul>
+      <li>load</li>
+      <li>resize</li>
+      <li>scroll</li>
+      <li>unload</li>
+      </ul>
+      <h3 id="syntax-for-jquery-events">Syntax for jQuery events</h3>
+      <pre><code>$(&#39;p&#39;).click(function(){
+  //action here occurs when you click on a paragraph
+});</code></pre>
+      <pre><code>$(&quot;#button1&quot;).mouseenter(function(){
+  alert(&quot;You entered id button1!&quot;);
+});</code></pre>
+      <pre><code>$(&quot;input&quot;).focus(function(){
+  $(this).css(&quot;background-color&quot;, &quot;#cccccc&quot;);
+});</code></pre>
+      <p>focus() is used when the user clicks on a form field.</p>
+      <ul>
+      <li>many more jQuery events <a
+      href="https://www.w3schools.com/jquery/jquery_events.asp">examples</a></li>
+      </ul>
+      <h3 id="jquery-resources">jQuery Resources</h3>
+      <ul>
+      <li><a
+      href="https://glitch.com/edit/#!/basic-jquery-starter">Link</a> to
+      my jQuery starter code/site on Glitch.</li>
+      <li>w3Schools jQuery <a
+      href="https://www.w3schools.com/jquery/">tutorial</a></li>
+      <li>jQuery onClick button <a
+      href="https://www.theextremewebdesigns.com/blog/jquery-on-click-event-examples/">examples</a>
+      tutorial</li>
+      </ul>
+      <h2 id="jquery-ui">jQuery UI</h2>
+      <blockquote>
+      <p>jQuery UI is a curated set of user interface interactions,
+      effects, widgets, and themes built on top of the jQuery JavaScript
+      Library.</p>
+      </blockquote>
+      <p><a href="https://jqueryui.com">Link</a></p>
+      <p><strong>Just like jQuery library you will need to make sure you
+      link to jQuery UI library before your own jQuery
+      script.</strong></p>
+      <p><a href="https://jqueryui.com/demos/">Examples</a> for all of
+      the widgets, including</p>
+      <ul>
+      <li>accordions, autocomplete, buttons, checkboxes, radios, date
+      pickers</li>
+      </ul>
+      <h3 id="read">Read</h3>
+      <ul>
+      <li><p>Read and be prepared to talk about <a
+      href="https://www.nytimes.com/2021/03/18/style/loretta-staples-ui-design.html">A
+      Pioneer of Digital Arts Looks Back on a Defining Era</a>: Loretta
+      Staples, a U.I. designer in the 1980s and ’90s, had a front-row
+      seat to the rise of personal computing. - 10 minutes</p></li>
+      <li><p>Read and be prepared to discuss <a
+      href="https://www.interaction-design.org/literature/article/how-to-design-voice-user-interfaces">How
+      to Design a Voice User Interface</a> - 20 minutes</p></li>
+      </ul>
+      <footer> <hr>
+
+<p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>
+
+<p><em>All course content, unless otherwise credited, is by Lee Tusman (c) 2025 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA</a>.</em></p>
+
+<p><a href="#">↑top</a></p> </footer>
+  </body>
+</html>

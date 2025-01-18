@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="date" content="" />
+      <title>Week 9 - Design patterns</title>
+      <link rel="stylesheet" href="../css/../css/cui.css" />
+
+      <meta property="og:title" content="Week 9 - Design patterns" />
+            <meta property="og:description" content="An intro to common
+UI design patterns" />
+                  <meta property="og:type" content="article" />
+  </head>
+  <body>
+      <header> <nav>
+    <p><a href="..">←home</a><br />
+</nav> </footer>
+      <h1>Week 9 - Design patterns</h1>
+      <p><em>Date: 2025-03-19</em></p>
+      <h2 id="overview">Overview</h2>
+      <h3 id="patterns-for-ui-design">Patterns for UI design</h3>
+      <p>Design patterns are identified common design considerations and
+      issues. Our homework reading is a list of common good/bad design
+      patterns.</p>
+      <p>Example design patterns: - Accordion - Menus - Directory
+      Navigation - Home link - Search - Autocomplete - Comment Box -
+      Wizard - Image Carousel</p>
+      <ul>
+      <li>Link to large <a
+      href="http://www.welie.com/patterns/">list</a> of Patterns</li>
+      </ul>
+      <h3 id="structural-patterns">Structural Patterns</h3>
+      <p>A <strong>wizard breaks</strong> tasks down in an interface
+      into a series of clear ordered steps.</p>
+      <p>A <strong>center stage</strong> is a pattern where a data
+      workspace (like a large spreadsheet) is displayed in the center.
+      Secondary information and options surround. Examples include Word
+      processing software, email software interfaces, drawing programs
+      such as software from the Adobe Creative Suite, etc.</p>
+      <h2 id="widgets">Widgets</h2>
+      <p>What’s a widget?</p>
+      <p>These are self-contained and reusable graphical objects.</p>
+      <p>Examples:</p>
+      <p><img src="../images/dropdown.png" alt="dropdown list" /><br />
+      <em>Dropdown list</em></p>
+      <p><img src="../images/combobox.jpg" alt="combobox" /><br />
+      <em>Combobox</em></p>
+      <p><img src="../images/tree.jpg" alt="Tree widget" /> <em>Tree
+      widget</em></p>
+      <p><img src="../images/pulldown.png" alt="Menubar" /> <em>Menubar
+      (aka pulldown menu)</em></p>
+      <h3 id="making-choices---multiple-options">Making choices -
+      multiple options</h3>
+      <ul>
+      <li>Radio buttons</li>
+      <li>Drop-down menus</li>
+      <li>Single selection</li>
+      <li>Toggle buttons</li>
+      <li>Checkboxes</li>
+      </ul>
+      <h3 id="making-choices---one-of-two-options">Making choices - one
+      of two options</h3>
+      <ul>
+      <li>single checkbox</li>
+      <li>single toggle button</li>
+      <li>single menu selection</li>
+      </ul>
+      <p>Don’t use pushbuttons! This is confusing.</p>
+      <h3 id="too-much-information">Too much information!</h3>
+      <p>How to show additional pages:</p>
+      <ul>
+      <li>Tabs</li>
+      <li>Accordion widgets</li>
+      <li>Table of Contents</li>
+      </ul>
+      <p><em>Never nest a scrolling box inside another scrolling
+      box!</em></p>
+      <h3 id="widgets---pros-and-cons">Widgets - pros and cons</h3>
+      <p>Pro:</p>
+      <ul>
+      <li>Consistency</li>
+      <li>Faster prototyping using templates</li>
+      </ul>
+      <p>Con:</p>
+      <ul>
+      <li>Widgets are pre-made and constrain thinking</li>
+      <li>Widgets encourage menus and forms rather than more direct /
+      innovative forms</li>
+      <li>Over-use of Widgets due to convenience</li>
+      </ul>
+      <h4 id="importance-of-simplicity">Importance of Simplicity</h4>
+      <p>K.I.S.S. - Keep it Simple, Stupid</p>
+      <p>We don’t design for ourselves. We design for others.</p>
+      <p>What are examples of software that are too complex?</p>
+      <ol type="1">
+      <li>Reduce information. Remove the unecessary.</li>
+      </ol>
+      <figure>
+      <img src="../images/remote.png" alt="remotes" />
+      <figcaption aria-hidden="true">remotes</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/apple-remote.jpg" alt="apple remotes" />
+      <figcaption aria-hidden="true">apple remotes</figcaption>
+      </figure>
+      <ol start="2" type="1">
+      <li>Combine elements</li>
+      </ol>
+      <p>Examples: - breadcrumbs - search boxes that also make
+      suggestions - title bars that update information in the title
+      bar</p>
+      <h3 id="scripting-with-jquery">Scripting with jQuery</h3>
+      <p>This class is not meant to be an advanced Javascript scripting
+      course. Other classes including Scripting For The Web cover
+      scripting in much more detail.</p>
+      <p>We are using the jQuery library as a simpler interface to work
+      with Javascript in the browser. This lets us quickly create usable
+      scripts to trigger events and actions in our interfaces.</p>
+      <p>jQuery is a library. It can access and alter the DOM.</p>
+      <p>jQuery provides a beginner-friendly simplified approach to
+      scripting, including a CSS-like selector system. Our scripts can
+      respond to <em>events</em> such as button presses.</p>
+      <h5 id="getting-started-with-jquery">Getting started with
+      jQuery</h5>
+      <p>2 options:</p>
+      <ol type="1">
+      <li>Download the latest jQuery script and add it to your
+      project.</li>
+      <li>Use an online CDN (Content Delivery Network) by linking to a
+      copy of jQuery on a CDN online (at a url).</li>
+      </ol>
+      <p>Use the first option especially for offline apps. Use the
+      second option for speed. A user may have visited a previous site
+      that uses jQuery, so their browser will have cached the site,
+      allowing it to run faster. Additionally, jQuery is hosted on
+      servers around the world, so it should load quickly
+      everywhere.</p>
+      <h3 id="jquery-syntax">jQuery Syntax</h3>
+      <pre><code>$(selector).action();</code></pre>
+      <p>Let’s break this down</p>
+      <p><code>$</code> is the jQuery sign. It tells the browser we are
+      using jQuery to access/alter the page.</p>
+      <p><em>selector</em> is a reference to the html object we want to
+      alter. We can reference html tags, classes, IDs.</p>
+      <p><code>action()</code> here is a reference to a jQuery action.
+      These are builtin actions you can trigger.</p>
+      <p>Examples:</p>
+      <p><code>$("p").hide()</code> will hide all paragraphs on the
+      page.</p>
+      <p><code>$(".header").hide()</code> will hide any element on the
+      page with a .header class.</p>
+      <h3 id="best-practices---document.ready">Best practices -
+      document.ready()</h3>
+      <p>It is best practice to wait to have our jQuery scripts run
+      after all HTML content (such as text, images) has loaded.</p>
+      <p>To do this, we put our script inside a nested ready() event.
+      This means that our pages waits until it’s ready (all content is
+      loaded) before it triggers the rest of our jQuery code to run.</p>
+      <pre><code>$(document).ready(function(){
+  // this is a comment in Javascript/jQuery
+  // jQuery methods go here...
+});</code></pre>
+      <h3 id="jquery-selector-examples">jQuery selector examples</h3>
+      <pre><code>$(&quot;p.intro&quot;);</code></pre>
+      <p>Selects all <code>&lt;p&gt;</code> elements with
+      class=“intro”</p>
+      <pre><code>$(&quot;a[target=&#39;_blank&#39;]&quot;)</code></pre>
+      <p>Selects all <code>&lt;a&gt;</code> elements with a target
+      attribute value equal to “_blank”</p>
+      <pre><code>$(&quot;ul li:first&quot;)</code></pre>
+      <p>Selects the first <code>&lt;li&gt;</code> element of the first
+      <code>&lt;ul&gt;</code></p>
+      <p><em>more jQuery selector <a
+      href="https://www.w3schools.com/jquery/jquery_selectors.asp">examples</a></em></p>
+      <h3 id="jquery-events">jQuery Events</h3>
+      <p><strong>Any action a user can do on the page is called an
+      “event.” Our script responds to these user events.</strong></p>
+      <h3 id="examples">Examples:</h3>
+      <p>Mouse Events:</p>
+      <ul>
+      <li>click</li>
+      <li>dblclick</li>
+      <li>mouseenter</li>
+      <li>mouseleave</li>
+      </ul>
+      <p>Key Events:</p>
+      <ul>
+      <li>keypress</li>
+      <li>keydown</li>
+      <li>keyup</li>
+      </ul>
+      <p>Form Events:</p>
+      <ul>
+      <li>submit</li>
+      <li>change</li>
+      <li>focus</li>
+      <li>blur</li>
+      </ul>
+      <p>Window Events:</p>
+      <ul>
+      <li>load</li>
+      <li>resize</li>
+      <li>scroll</li>
+      <li>unload</li>
+      </ul>
+      <h3 id="syntax-for-jquery-events">Syntax for jQuery events</h3>
+      <pre><code>$(&#39;p&#39;).click(function(){
+  //action here occurs when you click on a paragraph
+});</code></pre>
+      <pre><code>$(&quot;#button1&quot;).mouseenter(function(){
+  alert(&quot;You entered id button1!&quot;);
+});</code></pre>
+      <pre><code>$(&quot;input&quot;).focus(function(){
+  $(this).css(&quot;background-color&quot;, &quot;#cccccc&quot;);
+});</code></pre>
+      <p>focus() is used when the user clicks on a form field.</p>
+      <ul>
+      <li>many more jQuery events <a
+      href="https://www.w3schools.com/jquery/jquery_events.asp">examples</a></li>
+      </ul>
+      <h3 id="jquery-resources">jQuery Resources</h3>
+      <ul>
+      <li><a
+      href="https://glitch.com/edit/#!/basic-jquery-starter">Link</a> to
+      my jQuery starter code/site on Glitch.</li>
+      <li>w3Schools jQuery <a
+      href="https://www.w3schools.com/jquery/">tutorial</a></li>
+      <li>jQuery onClick button <a
+      href="https://www.theextremewebdesigns.com/blog/jquery-on-click-event-examples/">examples</a>
+      tutorial</li>
+      </ul>
+      <h2 id="jquery-ui">jQuery UI</h2>
+      <blockquote>
+      <p>jQuery UI is a curated set of user interface interactions,
+      effects, widgets, and themes built on top of the jQuery JavaScript
+      Library.</p>
+      </blockquote>
+      <p><a href="https://jqueryui.com">Link</a></p>
+      <p><strong>Just like jQuery library you will need to make sure you
+      link to jQuery UI library before your own jQuery
+      script.</strong></p>
+      <p><a href="https://jqueryui.com/demos/">Examples</a> for all of
+      the widgets, including</p>
+      <ul>
+      <li>accordions, autocomplete, buttons, checkboxes, radios, date
+      pickers</li>
+      </ul>
+      <p><em>Information from analysis, design patterns, widgets,
+      simplicity was adapted from MIT 6.831 8, Generating
+      Designs</em></p>
+      <footer> <hr>
+
+<p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>
+
+<p><em>All course content, unless otherwise credited, is by Lee Tusman (c) 2025 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA</a>.</em></p>
+
+<p><a href="#">↑top</a></p> </footer>
+  </body>
+</html>

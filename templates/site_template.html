@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$title$</title>
+    <link rel="stylesheet" href="$theme$">
+
+  <meta property="og:title" content="$title$" />
+  <meta property="og:url" content="$site_url$" />
+  <meta property="og:type" content="website" />
+    </head>
+    <body>
+      <header>
+	$for(include-before)$
+	  $include-before$
+	$endfor$
+      </header>
+      <h1>$title$</h1>
+      <img src="images/soviet-interfaces.jpg" alt="soviet control panel interfaces" width="300" height="auto">
+      <p><a href="/syllabus">Syllabus</a></p>
+      <h2>Classes</h2>
+      $body$
+      <footer>$for(include-after)$ $include-after$ $endfor$</footer>
+  </body>
+</html>

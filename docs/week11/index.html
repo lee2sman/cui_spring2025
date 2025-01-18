@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="date" content="" />
+      <title>Week 11 - Intro to Voice User Interfaces</title>
+      <link rel="stylesheet" href="../css/../css/cui.css" />
+
+      <meta property="og:title" content="Week 11 - Intro to Voice User
+Interfaces" />
+            <meta property="og:description" content="An introduction to
+designing voice user interfaces" />
+                  <meta property="og:type" content="article" />
+  </head>
+  <body>
+      <header> <nav>
+    <p><a href="..">←home</a><br />
+</nav> </footer>
+      <h1>Week 11 - Intro to Voice User Interfaces</h1>
+      <p><em>Date: 2025-04-02</em></p>
+      <h2 id="overview">Overview</h2>
+      <ul>
+      <li>intro to Voice user interfaces</li>
+      <li>VUI design process</li>
+      <li>VUI vocab</li>
+      <li>intro to Voiceflow</li>
+      </ul>
+      <h2 id="voice-user-interface">Voice User Interface</h2>
+      <p>Excerpt from Her - <a
+      href="https://www.youtube.com/watch?v=GV01B5kVsC0">video</a></p>
+      <h3 id="how-to-interact-with-alexa">How To Interact with
+      Alexa</h3>
+      <p>Everything you wanted to know about conversation design but
+      were afraid to ask - <a
+      href="https://www.youtube.com/watch?v=RdCmMMwaFRs">video</a></p>
+      <p><img src="../images/alexa.webp" alt="Alexa parsing" /><br />
+      <em>How Alexa parses your -utterances-</em></p>
+      <h3
+      id="the-voice-design-process-for-voice-user-interfaces-vuis">The
+      Voice Design Process For Voice User Interfaces (VUIs)</h3>
+      <p>Voice User Interfaces are still an early technology, though
+      they have connection to previous interfaces such as Command Line
+      Interfaces. Because they are a recent mass-use technology, the
+      process of designing a VUI is still developing.</p>
+      <p>One method based on our iterative design model for creating
+      GUIs, adapted with additional steps for voice. - <a
+      href="https://www.youtube.com/watch?v=8OXN0ZDpwrM">video</a> ###
+      Understand</p>
+      <ol type="1">
+      <li>User Persona</li>
+      </ol>
+      <ul>
+      <li>who will use our interface?</li>
+      <li>what are their needs?</li>
+      <li>what device are we designing for?</li>
+      </ul>
+      <ol start="2" type="1">
+      <li>System Persona</li>
+      </ol>
+      <ul>
+      <li>you decide how it behaves and sounds</li>
+      </ul>
+      <ol start="3" type="1">
+      <li>Journey mapping</li>
+      </ol>
+      <h3 id="explore">Explore</h3>
+      <ol type="1">
+      <li>Sample dialog</li>
+      </ol>
+      <ul>
+      <li>“Happy path” - first draft</li>
+      </ul>
+      <ol start="2" type="1">
+      <li>Table reading - take notes</li>
+      <li>“Wizard of Oz” test</li>
+      </ol>
+      <h3 id="materialize">Materialize</h3>
+      <ol type="1">
+      <li>User flowchart - wireframe</li>
+      <li>Voice design - in a spreadsheet</li>
+      <li>New - multi-modal interactions (combo of screen and
+      voice.)</li>
+      </ol>
+      <ul>
+      <li>“voice first” - then screen interactions afterwards</li>
+      </ul>
+      <figure>
+      <img src="../images/flowchart.png" alt="flow chart" />
+      <figcaption aria-hidden="true">flow chart</figcaption>
+      </figure>
+      <p>How to interact with Alexa - Voice Design Guide - <a
+      href="https://www.youtube.com/watch?v=JwUxY2-kIbg&amp;feature=emb_logo">video</a></p>
+      <h3 id="glossary-alexa">Glossary (Alexa):</h3>
+      <ul>
+      <li>Wake word —this is the key for Alexa to start listening.</li>
+      <li>Launch —a connector word to link the wake word and invocation
+      name. Supported words include: ask, tell, open, launch, run,
+      begin, and more.</li>
+      <li>Invocation name —this is a custom phrase that customers say to
+      invoke your skill. It is generally two–three words long and
+      closely related to the skill’s functionality.</li>
+      <li>Utterance —this is the specific phrase that the user wants to
+      take action on with the skill.</li>
+      <li>One-shot utterance —the top example is a one-shot utterance,
+      where all information is given at once and fully satisfies what is
+      needed to activate an intent.</li>
+      <li>Slot value —a variable part of an utterance. In our
+      travel-planning scenario, the starting location, destination,
+      activity, and date are all slot values.</li>
+      <li>Intent —an action that the skill can handle. A single intent
+      can have many different utterances, with or without slots to
+      account for what users may say.</li>
+      </ul>
+      <h3 id="basic-user-interface-guidelines">Basic user interface
+      guidelines:</h3>
+      <ul>
+      <li>Express intentions in examples</li>
+      <li>Limit the amount of information
+      <ul>
+      <li>Recommended: do not list more than 3 different options per
+      interaction</li>
+      <li>with a longer list of options, group them into subcategories.
+      Start with the most popular options, then ask if they would like
+      more options.</li>
+      </ul></li>
+      <li>Use some form of simple visual feedback to let the user know
+      when the system is listening</li>
+      </ul>
+      <ol type="1">
+      <li>Make It Clear that the User Needs to Respond</li>
+      <li>Don’t Assume Users Know What to Do</li>
+      <li>Clearly Present the Options</li>
+      <li>Keep It Brief</li>
+      <li>Avoid Overwhelming Users with Too Many Choices</li>
+      <li>Offer Help for Complex Skills</li>
+      <li>Ask Only Necessary Questions</li>
+      <li>Use Confirmation Selectively</li>
+      <li>Obtain One Piece of Information at a Time</li>
+      </ol>
+      <p><em>These design tips suggested by Amazon Alexa <a
+      href="https://developer.amazon.com/en-US/docs/alexa/custom-skills/voice-design-best-practices-legacy.html">Best
+      Practices</a> that may be useful Do’s and Don’ts.</em></p>
+      <h3 id="playful-interfaces">Playful interfaces</h3>
+      <p><a
+      href="http://kentuckyroutezero.com/here-and-there-along-the-echo/">Here
+      and There Along The Echo</a></p>
+      <p>Call 270-301-5797</p>
+      <h2 id="designing-a-voice-skill">Designing a Voice Skill</h2>
+      <p>Alexa</p>
+      <p><a href="https://developer.amazon.com/alexa/">Developer
+      sign-up</a></p>
+      <p>Parts: 1. Invocation 2. Intents, Sample, Slots 3. Build model
+      4. Endpoint</p>
+      <h2 id="homework">Homework</h2>
+      <h3 id="watch">Watch</h3>
+      <p><a href="https://www.youtube.com/watch?v=lvv6zYOQqm0">Meet Q
+      the first genderless VUI</a></p>
+      <p>How does Natural Language Processing work? - <a
+      href="https://www.youtube.com/watch?v=oi0JXuL19TA">video</a> from
+      PBS/Crash Course - 15 minutes</p>
+      <h3 id="read">Read</h3>
+      <ul>
+      <li><p>Read <a
+      href="https://www.nytimes.com/2021/03/18/style/loretta-staples-ui-design.html">A
+      Pioneer of Digital Arts Looks Back on a Defining Era</a>: Loretta
+      Staples, a U.I. designer in the 1980s and ’90s, had a front-row
+      seat to the rise of personal computing. - 10 minutes</p></li>
+      <li><p>Read <a
+      href="https://www.interaction-design.org/literature/article/how-to-design-voice-user-interfaces">How
+      to Design a Voice User Interface</a> - 20 minutes</p></li>
+      </ul>
+      <p>Why Do So Many Digital Assistants Have Feminine Names? - <a
+      href="https://www.theatlantic.com/technology/archive/2016/03/why-do-so-many-digital-assistants-have-feminine-names/475884/">article</a>
+      - 10 minutes</p>
+      <p>Why People Name Their Machines - <a
+      href="https://www.theatlantic.com/technology/archive/2014/06/why-people-give-human-names-to-machines/373219/">article</a>
+      - 5 minutes</p>
+      <h2 id="write">Write</h2>
+      <p>We’ve now read how humans like to anthropomorphize their
+      machines, and some of the reasons digital assistants have
+      historically received feminine names. If you were designing a
+      digital assistant, what choices would you make in its design?
+      Would it have a name? A gender? Describe how you would design the
+      assistant and why you’ve made those choices.</p>
+      <footer> <hr>
+
+<p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>
+
+<p><em>All course content, unless otherwise credited, is by Lee Tusman (c) 2025 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA</a>.</em></p>
+
+<p><a href="#">↑top</a></p> </footer>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="date" content="" />
+      <title>Week 4 - Designing for Screens </title>
+      <link rel="stylesheet" href="../css/../css/cui.css" />
+
+      <meta property="og:title" content="Week 4 - Designing for Screens
+" />
+            <meta property="og:description" content="Designing for
+multiple screen sizes" />
+                  <meta property="og:type" content="article" />
+  </head>
+  <body>
+      <header> <nav>
+    <p><a href="..">←home</a><br />
+</nav> </footer>
+      <h1>Week 4 - Designing for Screens </h1>
+      <p><em>Date: 2025-02-12</em></p>
+      <h2 id="overview">Overview</h2>
+      <ul>
+      <li>review MTA Metrocard screen</li>
+      <li>practice flexbox</li>
+      <li>working with fonts</li>
+      <li>responsive design</li>
+      <li>iterative design
+      <ul>
+      <li>user-centered design</li>
+      </ul></li>
+      <li>wireframing + prototyping
+      <ul>
+      <li>paper prototyping</li>
+      </ul></li>
+      </ul>
+      <h2 id="metrocard-ui">Metrocard UI</h2>
+      <figure>
+      <img src="../images/metrocard.jpg" alt="Metrocard" />
+      <figcaption aria-hidden="true">Metrocard</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/metrocard-machine.png"
+      alt="Metrocard screen" />
+      <figcaption aria-hidden="true">Metrocard screen</figcaption>
+      </figure>
+      <h2 id="flexbox">Flexbox</h2>
+      <p>Flexbox layout is a relatively recent (as of 2017) addition to
+      CSS providing an efficient, intuitive model to arrange, space out
+      and align a series of html assets within a <em>container</em>.</p>
+      <p>The way this works is that you define a <em>container</em>, a
+      parent box object that your items (usually images or other html
+      items like divs) will sit inside. You define how those items
+      should take up the full space of the container. The items expands
+      to take up the full space of the container.</p>
+      <p>This isn’t the only way to lay out assets on a webpage or web
+      app. It is ideal for small screen web applications. For larger
+      layouts the CSS grid system is recommended.</p>
+      <p><img src="../images/container.svg"
+      alt="flexbox container" /><br />
+      <em>Flexbox container, source: <a
+      href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks</a></em></p>
+      <h4 id="flexbox---code-snippets">Flexbox - code snippets</h4>
+      <pre><code>.container {
+/* this is a comment in css */
+/* you assign the parent container using display: flex */
+
+  display: flex;
+  
+/* optional: define flex-direction as row, column, etc */
+  
+  flex-direction: row; /* default, if undefined */
+  
+/* optional: flex-wrap defines whether items fit on a single line or wrap */
+
+  flex-wrap: wrap; /* default is nowrap */
+}</code></pre>
+      <h3 id="justifying-content">Justifying content</h3>
+      <p>Justifying content is often used with Flexbox. It allows you to
+      define how items spread out and take up space inside the
+      container. You define this on the parent container.</p>
+      <p><img src="../images/justify-content.svg"
+      alt="justify-content in flexbox" /><br />
+      <em>Justify-content in Flexbox, source: <a
+      href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks</a></em></p>
+      <pre><code>.container {
+  justify-content: space-evenly;
+  
+  /* other options: 
+    flex-start (default), aligns to left
+    flex-end, aligns to right
+    center, aligns to center
+    space-between
+    space-around
+    space-evenly
+  */
+}</code></pre>
+      <h3 id="flexbox-links">Flexbox links</h3>
+      <ul>
+      <li><a
+      href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS
+      Tricks</a></li>
+      <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+      </ul>
+      <p><img src="../images/children.svg"
+      alt="flexbox children - flex items" /><br />
+      <em>Flexbox items aka children, source: <a
+      href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks</a></em></p>
+      <pre><code>.child-item {
+
+/* flex-grow defines how much space an item takes up, optional */
+  
+  flex-grow: 2; /* this will be twice the width of other items (or height if a column) */
+
+}
+
+</code></pre>
+      <ul>
+      <li><a
+      href="https://css-tricks.com/almanac/properties/f/flex-wrap/">demos</a>
+      of flex-wrap</li>
+      </ul>
+      <h3 id="working-with-fonts">Working with Fonts</h3>
+      <p>Two slightly different methods:</p>
+      <ol type="1">
+      <li>Google Fonts</li>
+      <li>Importing custom fonts</li>
+      </ol>
+      <h3 id="google-fonts">Google Fonts</h3>
+      In this method, you visit the <a
+      href="https://fonts.google.com/">Google Fonts</a> website. Select
+      a font. Click <em>Select this style</em>. From the new that opens
+      in the interface, copy the <em><link></em> code into the
+      <head>
+      <p>section of your html page. <strong>Make sure you place it
+      before your own stylesheet.</strong></p>
+      <p>Then, back to the Google Fonts page, copy the line from the CSS
+      rules box. It will look like this:</p>
+      <pre><code>font-family: &#39;Akaya Telivigala&#39;, cursive;</code></pre>
+      <p>Go to your own stylesheet and paste it in the selector for the
+      element you want to change. For example, if you want all text to
+      use that font, then you can place it in the body section on your
+      CSS stylesheet.</p>
+      <h3 id="importing-custom-fonts">Importing Custom Fonts</h3>
+      <p>Find a font that you like online. There are tens of thousands
+      you can use for free (check the license listed) at <a
+      href="https://www.dafont.com/">DaFont.com</a>. Download the font
+      to your computer.</p>
+      <p>In your Glitch.com project, open the assets folder and import
+      the font you just downloaded a moment ago. When it finishes
+      importing, click on it and copy the URL.</p>
+      <p>Go to your stylesheet and add a font section at the top and add
+      a name for the font (you can decide). For example:</p>
+      <pre><code>@font-face {
+  font-family: niceFont;
+  src: url(&lt;PASTE THE URL FROM THE ASSETS FOLDER HERE&gt;
+}</code></pre>
+      <p>Don’t put spaces in the font name.</p>
+      <p><em>If you are not using Glitch and instead your own webserver
+      and editing with Atom or SublimeText or Visual Studio Code you can
+      put your font in an assets folder and then the second line above
+      would change to:
+      <code>src: url(assets/&lt;font-file-name.ttf&gt;;</code></em></p>
+      <p>Now you can use that font in a section on your stylesheet. For
+      example, if you want all paragraphs to use that font:</p>
+      <pre><code>p {
+  font-family: niceFont;
+}</code></pre>
+      <p>This is the same line of text as above, but now it will apply
+      that font to your paragraph text. If you want to change the font
+      for your entire website, you can place this in body instead of
+      p.</p>
+      <h3 id="more-info-on-fonts">More info on fonts</h3>
+      <ul>
+      <li><a
+      href="https://www.w3schools.com/css/css_font_google.asp">Google
+      fonts</a> on w3schools</li>
+      <li><a
+      href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp"><span
+      class="citation" data-cites="font-face">@font-face</span> and
+      custom fonts</a> on w3schools</li>
+      </ul>
+      <h3 id="design-principles">Design Principles</h3>
+      <ol type="1">
+      <li>Learnability</li>
+      <li>Visibility</li>
+      <li>Efficiency</li>
+      <li>Error prevention / error handling</li>
+      <li>User control</li>
+      </ol>
+      <h3 id="efficiency">Efficiency</h3>
+      <p>When designing an interface, consider your <em>defaults</em>.
+      Defaults are common answers. Consider how you may want to indicate
+      these defaults to your users.</p>
+      <h3 id="anticipation">Anticipation</h3>
+      <p>Anticipation is the concept that good design presents all
+      information at once. It considers a common workflow, and minimizes
+      having to move back and forth within this workflow.</p>
+      <p>Users don’t like having to move back and forth within
+      navigation. Consider our pizza calculator apps as an example.</p>
+      <h2 id="usability-through-iterative-design">Usability through
+      Iterative Design</h2>
+      <p>User-centered design - iterative design is considered best
+      practice for user-centered design - what does iterative mean? -
+      considered best practice for usability</p>
+      <h3 id="what-does-iterative-design-look-like">What does iterative
+      design look like?</h3>
+      <p>It’s a circular process</p>
+      <ol type="1">
+      <li>Create an initial interface design</li>
+      <li>Implement</li>
+      <li>Evaluate</li>
+      </ol>
+      <p><strong>Go back to design and begin again…</strong></p>
+      <p>This is in contrast to an earlier design process called
+      Waterfall.</p>
+      <p><img src="../images/waterfall.svg"
+      alt="waterfall model of software design" /><br />
+      <em>Waterfall model of software design, source: <a
+      href="https://upload.wikimedia.org/wikipedia/commons/e/e2/Waterfall_model.svg">Wikipedia</a></em></p>
+      <p>The limitations of this model:</p>
+      <ul>
+      <li>User interface is difficult to predict and we’re likely to get
+      it wrong</li>
+      <li>Users aren’t involved in testing until near the end</li>
+      <li>UI mistakes cause changes in requirements and design</li>
+      </ul>
+      <h3 id="iterative-design-process">Iterative design process</h3>
+      <ol type="1">
+      <li>Create initial interface design</li>
+      <li>Have users test it</li>
+      <li>Note problems</li>
+      <li>Refine interface</li>
+      <li>Have users test it</li>
+      <li>Refine interface</li>
+      <li>Have users test it</li>
+      <li>Repeat until interface issues solved</li>
+      </ol>
+      <h3 id="the-spiral-model">The spiral model</h3>
+      <p>This is a modification of the iterative process. We describe
+      the earliest interfaces as <em>cheap</em> - minimal fast
+      prototypes.</p>
+      <p>It’s possible to make multiple alternatives to consider and
+      test. Remember David Reinfurt’s alternative UI prototypes for the
+      Metrocard machine.</p>
+      <p>Start with a paper/pencil sketch! Earliest interfaces should be
+      considered <em>throw-away</em>.</p>
+      <p>Later iterative designs should be more detailed. THE UI should
+      become clearer.</p>
+      <p>The more iterations the better your UI. Have every prototype
+      get evaluated by users!</p>
+      <p>Also consider Simulation (The “Wizard of Oz” approach).</p>
+      <h4 id="prototyping">Prototyping</h4>
+      <ul>
+      <li>Cheap, throw-away UI tests</li>
+      <li>Cheapest:
+      <ul>
+      <li>paper / pencil prototypes</li>
+      <li>“Wizard of Oz” simulation</li>
+      </ul></li>
+      <li>Medium:
+      <ul>
+      <li>HTML</li>
+      </ul></li>
+      <li>GUI implementation:
+      <ul>
+      <li>native vs web GUI</li>
+      </ul></li>
+      </ul>
+      <h2 id="paper-prototyping---wireframing">Paper prototyping -
+      Wireframing</h2>
+      <figure>
+      <img src="../images/sketch.jpg" alt="ui sketch" />
+      <figcaption aria-hidden="true">ui sketch</figcaption>
+      </figure>
+      <p><img src="../images/flow.jpg"
+      alt="ui flowchart mockup" /><br />
+      <em><a
+      href="https://www.flickr.com/photos/24084766@N07/4595959073/">source</a></em></p>
+      <p><img src="../images/scratch-off.jpg"
+      alt="scratch off wireframe example" /><br />
+      <em><a
+      href="https://www.flickr.com/photos/thegreatsunra/3657128657/">source</a></em></p>
+      <p><img src="../images/time.jpg" alt="time UI" /><br />
+      <em><a
+      href="https://www.flickr.com/photos/anthonyarmendariz/4448219885/in/pool-1070674@N20/">source</a></em></p>
+      <h2 id="units-of-measurement">Units of measurement</h2>
+      <p>There are 5+ ways to specify sizes in CSS!</p>
+      <p>They are: <code>px</code>, <code>em</code>, <code>rem</code>,
+      <code>%</code> and <code>viewport units</code>.</p>
+      <p><strong>em</strong> - Relative to the font-size of the element
+      (2em means 2 times the size of the current font)</p>
+      <p><strong>rem</strong> - Relative to font-size of the root
+      element</p>
+      <p><strong>%</strong> - Relative to the parent element</p>
+      <p><strong>vw</strong> - Relative to 1% of the width of the
+      viewport</p>
+      <p><strong>vh</strong> - Relative to 1% of the height of the
+      viewport</p>
+      <p><strong>vmin</strong> - Relative to 1% of viewport’s smaller
+      dimension</p>
+      <pre><code>div {
+  width: 200px;
+  font-size: 2em;
+}
+p {
+  font-size: 3rem;
+}
+img {
+  width: 50%;
+}
+.container {
+  width: 80vw;
+  height: auto;
+  margin: 10vmin;
+}</code></pre>
+      <p>More info on <a
+      href="https://www.w3schools.com/CSSref/css_units.asp">CSS
+      units</a> on w3schools</p>
+      <h2 id="responsive-design">Responsive design</h2>
+      <p>What is it?</p>
+      <p>Design should respond to the user’s behavior and environment.
+      This could be based on screen size, orientation (vertical or
+      horizontal), and platform (Mac, Windows, iOS, Android, Linux,
+      etc).</p>
+      <ul>
+      <li>How do you do it?</li>
+      </ul>
+      <p>``</p>
+      <ol type="1">
+      <li>consider your viewport width</li>
+      <li>use flexbox (or CSS grid) to make sizing flexible</li>
+      <li>pay attention to font sizes (small size on small screen = hard
+      to read)</li>
+      <li>use media queries (aka set breakpoints) to resize things for
+      small screens</li>
+      </ol>
+      <h3 id="step-1-set-the-viewport-width.">Step 1: Set the viewport
+      width.</h3>
+      Place this somewhere in the
+      <head>
+      <p>section:</p>
+      <pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; </code></pre>
+      <h3 id="step-2-use-flexbox-to-make-sizing-placement-flexible">Step
+      2: Use flexbox to make sizing / placement flexible</h3>
+      <p>Covered earlier in class. See Flexbox notes.</p>
+      <h4
+      id="step-3-consider-font-sizes.-use-different-sizing-that-may-be-more-flexible-for-your-needs.-examples-include-viewport-units.">Step
+      3: Consider font sizes. Use different sizing that may be more
+      flexible for your needs. Examples include viewport units.</h4>
+      <p>If the CSS width property is set to 100% of the viewport, the
+      image will be responsive and scale up and down:</p>
+      <p>A better solution, in many cases, will be to use the max-width
+      property instead so that it is not larger than the screen.</p>
+      <h3 id="step-4-media-queries">Step 4: Media Queries</h3>
+      <p>In the example below, if the user’s screen is less than 800
+      pixels then the container class (which has been set previously as
+      a flexbox with default settings) will have the flex-direction be
+      changed to column view. This is a good approach when you want to
+      change from a horizontal sequence of divs to a vertical
+      orientation on a phone.</p>
+      <pre><code>/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .container {
+      flex-direction: column;
+  }
+}</code></pre>
+      <h3 id="resources">Resources</h3>
+      <p>Additional resources: - basic overview of responsive design in
+      html/css on <a
+      href="https://www.w3schools.com/html/html_responsive.asp">W3Schools</a>
+      - <a
+      href="https://designmodo.com/responsive-design-examples/">Responsive
+      Web Design: 50 Examples and Best Practices</a></p>
+      <h3 id="homework">Homework</h3>
+      <p>Read about <a
+      href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive
+      Design</a> in Smashing Magazine.</p>
+      <p>Make a copy of last week’s homework and now alter it. Make it
+      responsive using CSS. You can choose for example the breakpoints
+      (at what pixel size does it switch to a vertical orientation for
+      example). The goal is to make a useable interface that will resize
+      and look good for phones, tablets and desktop.</p>
+      <p><em>source: User-Centered Design is adapted from MIT Open
+      Courseware 6.831 User-Centered Design</em></p>
+      <footer> <hr>
+
+<p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>
+
+<p><em>All course content, unless otherwise credited, is by Lee Tusman (c) 2025 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA</a>.</em></p>
+
+<p><a href="#">↑top</a></p> </footer>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="date" content="$date-meta$" />
+      <title>$title$</title>
+      <link rel="stylesheet" href="../css/$theme$" />
+
+      <meta property="og:title" content="$title$" />
+      $if(description)$
+      <meta property="og:description" content="$description$" />
+      $endif$
+      $if(image)$
+      <meta property="og:image" content="$image$" />
+      $endif$
+      <meta property="og:type" content="article" />
+  </head>
+  <body>
+      <header>$for(include-before)$ $include-before$ $endfor$</footer>
+      <h1>$title$</h1>
+      <p><em>Date: $date$</em></p>
+      $body$
+      <footer>$for(include-after)$ $include-after$ $endfor$</footer>
+  </body>
+</html>

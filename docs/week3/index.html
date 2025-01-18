@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="date" content="" />
+      <title>Week 3 - Building interfaces with HTML and CSS</title>
+      <link rel="stylesheet" href="../css/../css/cui.css" />
+
+      <meta property="og:title" content="Week 3 - Building interfaces
+with HTML and CSS" />
+            <meta property="og:description" content="An overview of
+building interfaces with HTML and CSS, the building blocks of design for
+the web." />
+                  <meta property="og:type" content="article" />
+  </head>
+  <body>
+      <header> <nav>
+    <p><a href="..">←home</a><br />
+</nav> </footer>
+      <h1>Week 3 - Building interfaces with HTML and CSS</h1>
+      <p><em>Date: 2025-02-05</em></p>
+      <h2 id="overview">Overview</h2>
+      <ul>
+      <li>Interfaces - theory</li>
+      <li>Interface design example: Metrocard Machine</li>
+      <li>Learnability</li>
+      <li>User Interface Wall of Fame/Shame</li>
+      <li>HTML and CSS recap</li>
+      <li>buttons</li>
+      </ul>
+      <h2 id="readings">Readings</h2>
+      <blockquote>
+      <p>A point where two systems, subjects, organizations, etc., meet
+      and interact. <em>–dictionary definition</em></p>
+      </blockquote>
+      <h3
+      id="earliest-concepts-for-what-a-computer-and-its-interface-may-look-like">Earliest
+      concepts for what a computer (and its interface) may look
+      like</h3>
+      <p>Vannevar Bush’s Memex proposal in 1945 - <a
+      href="https://www.youtube.com/watch?v=fIsPFWSYf3c">video</a></p>
+      <p><img src="../images/memex.jpg"
+      alt="Vannevar Bush’s As We May Think - Memex" /> Vannevar Bush’s
+      As We May Think - Memex</p>
+      <h3 id="c.j.-lickliders-man-computer-symbiosis">C.J. Licklider’s
+      ‘Man-Computer Symbiosis’</h3>
+      <ul>
+      <li>1960</li>
+      </ul>
+      <p>Proposed three modes of interfaces with computers:</p>
+      <ul>
+      <li><em>desk surfaces</em> - can be drawn on and interpreted by
+      the computer</li>
+      <li><em>networked wall and desk displays</em> - for collaboration
+      and for input to the computer</li>
+      <li><em>speech recognition</em> - to give input to the
+      computer</li>
+      </ul>
+      <h3 id="psychologist-donald-norman">Psychologist Donald
+      Norman</h3>
+      <blockquote>
+      <p>‘the real problem with the interface is that it is an
+      interface. Interfaces get in the way. I don’t want to focus my
+      energies on an interface. I want to focus on the job. When I use
+      my computer , it is in order to get a job done: I don’t want to
+      think of myself as using a computer, I want to think of myself as
+      doing my job.’</p>
+      </blockquote>
+      <h3
+      id="david-reinfurt-on-designing-the-metrocard-ticket-machine-interfaces">David
+      Reinfurt on designing the MetroCard ticket machine interfaces</h3>
+      <p><img src="../images/notebook-mta.png"
+      alt="Metrocard planning" /><br />
+      Four alternative interface sketches</p>
+      <p><img src="../images/flowchart-mta.png"
+      alt="Reinfurt interface flow" /><br />
+      Planning the flow of windows for the interface</p>
+      <p><img src="../images/test-metrocard.png"
+      alt="Metrocard test run" /><br />
+      Testig the Metrocard machine interface</p>
+      <p>MTA ticket machine interface models:</p>
+      <ul>
+      <li>pre-existing system</li>
+      <li>Parking machine model - User places card in then adds
+      money</li>
+      <li>Vending Machine model - first you insert money, then you click
+      on what you want</li>
+      <li>ATM Model - carefully walks you through every step, lots of
+      intermediate steps and feedback</li>
+      </ul>
+      <p>Which did users prefer in tests?</p>
+      <h2 id="learnability">Learnability</h2>
+      <ul>
+      <li>Human Memory</li>
+      <li>interaction styles</li>
+      <li>user models vs system models</li>
+      <li>learnability principles</li>
+      </ul>
+      <figure>
+      <img src="../images/testfairy.png" alt="testfairy interface" />
+      <figcaption aria-hidden="true">testfairy interface</figcaption>
+      </figure>
+      <p>This is the install screen for Testfairy, an app for Android
+      that lets developers test out apps before releasing them to a
+      wider public.</p>
+      <p>This screen is essentially like a full size dialogue. It
+      contains:</p>
+      <ul>
+      <li>basic info</li>
+      <li>a link to install the app</li>
+      <li>info on how to use the app</li>
+      <li>marketing text</li>
+      <li>contact info</li>
+      <li>link to read terms</li>
+      <li>the ability to report spam</li>
+      <li>Unsubscribe</li>
+      </ul>
+      <p>That is a lot of text for an app interface. It contains a link
+      to download the app as well as instructions to use the app, which
+      you’d have to memorize as clicking to install and opening the app
+      would be on a separate screen.</p>
+      <p>This is not very learnable!</p>
+      <h3 id="human-short-term-memory">Human short-term memory</h3>
+      <p>One model for understanding human memory is that we have
+      working memory and longterm memory. Working memory is where we do
+      our active <em>thinking</em>. Studies generally indicate we have a
+      limited amount of elements we can actively engage with in our
+      short term memory, generally framed as around 7 items.</p>
+      <p>We need to limit the user’s options so as not to overload their
+      active working memory.</p>
+      <h3 id="three-types-of-interaction-styles">Three types of
+      interaction styles</h3>
+      <ol type="1">
+      <li>Command language</li>
+      <li>Menus / forms</li>
+      <li>Direct maniulation</li>
+      </ol>
+      <h3 id="command-language">1. Command language</h3>
+      <p>The command line is a command language. These are the earliest
+      type of computer interfaces (see week 1 notes).</p>
+      <p>As an example, a Google/DuckDuckGo/Bing search bar creates a
+      command language query.</p>
+      <p><code>computer science site:purchase.edu</code></p>
+      <p>We can consider a Voice User Interface as another manifestation
+      of a command language.</p>
+      <h3 id="menus-forms">2. Menus / forms</h3>
+      <p>Google form for Processing Community Day NYC</p>
+      <p>Menus / form interfaces are a more recent interaction model
+      than command language but have been around at least since the 80s.
+      The earliest websites (90s) behave this way.</p>
+      <p>Dialog boxes are essentially simplified forms.</p>
+      <p>They can provide a clear if unglamorous interface.</p>
+      <figure>
+      <img src="../images/error.png" alt="error message" />
+      <figcaption aria-hidden="true">error message</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/combobox.jpg" alt="combobox" />
+      <figcaption aria-hidden="true">combobox</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/dialog-example.png"
+      alt="dialog box example" />
+      <figcaption aria-hidden="true">dialog box example</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/dropdown.png" alt="dropdown menu" />
+      <figcaption aria-hidden="true">dropdown menu</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/win95.png" alt="win95 menus" />
+      <figcaption aria-hidden="true">win95 menus</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/form.png" alt="form" />
+      <figcaption aria-hidden="true">form</figcaption>
+      </figure>
+      <h3 id="direct-manipulation">3. Direct manipulation</h3>
+      <p>Direct manipulation is the term we use for a interface where a
+      user interacts with a visual representation of a data object.</p>
+      <ul>
+      <li>There are physical actions such as dragging on scrollbars or
+      pressing a button</li>
+      <li>fast, incremental, reversible</li>
+      <li>immediate visual indication of an action taking effect</li>
+      </ul>
+      <figure>
+      <img src="../images/gimp.png" alt="GIMP" />
+      <figcaption aria-hidden="true">GIMP</figcaption>
+      </figure>
+      <figure>
+      <img src="../images/gmail.png" alt="gmail" />
+      <figcaption aria-hidden="true">gmail</figcaption>
+      </figure>
+      <h3 id="compare-interaction-styles">Compare interaction
+      styles</h3>
+      <ul>
+      <li>learnability - short-term working memory</li>
+      <li>consider which requires the user to hold more things in their
+      head at once</li>
+      <li>error feedback</li>
+      <li>think of errors on the command line vs the error of dragging a
+      scrollbar too far</li>
+      <li>efficiency</li>
+      <li>which is faster for experts?</li>
+      <li>can direct manipulation be efficient?</li>
+      <li>user types</li>
+      <li>which is better for experts?</li>
+      <li>for beginners?</li>
+      <li><strong>programming difficulty</strong></li>
+      <li>command languages are relatively easy to create</li>
+      <li>direct manipulations requires graphics which require both
+      commands as well as creating the visual interface</li>
+      <li>accessibility</li>
+      <li>command languages and menus and forms are based on text so can
+      be easier for vision-impaired users</li>
+      </ul>
+      <h3 id="model-of-a-system">Model of a system</h3>
+      <p>The <strong>model</strong> of a system is the sum of the
+      constituent parts of a system and how they work together. It
+      describes how those parts work and interact to make a system do
+      something.</p>
+      <h3 id="system-model---how-the-system-actually-works">System model
+      - how the system actually works</h3>
+      <h3
+      id="interface-model---the-model-that-gets-presented-to-the-user-through-its-interface">Interface
+      model - the model that gets presented to the user through its
+      interface</h3>
+      <h3 id="user-model---how-the-user-thinks-the-system-works">User
+      model - how the user thinks the system works</h3>
+      <p>The interface model must be</p>
+      <ul>
+      <li>simple</li>
+      <li>match the user’s conception of the needed task</li>
+      <li>clear</li>
+      </ul>
+      <p>Interface models should give immediate feedback. Consider what
+      happens when you push a button or drag a scrollbar. Feedback
+      should be visual but can also be audio (clicking sound for
+      example).</p>
+      <p>Interfaces should be consistent, not surprising. For best
+      practices, follow what popular programs or platforms do.</p>
+      <p>Interfaces should use common words, not technical jargon.</p>
+      <figure>
+      <img src="../images/apple-remote.jpg" alt="apple remote" />
+      <figcaption aria-hidden="true">apple remote</figcaption>
+      </figure>
+      <h3 id="user-interface-wall-of-fameshame">User Interface Wall of
+      Fame/Shame</h3>
+      <h2 id="html-css-practice">HTML / CSS practice</h2>
+      <p><a href="https://glitch.com/~html-css-basic">Starter code</a>
+      on Glitch.com</p>
+      <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>DOM</li>
+      <li>Placement via css</li>
+      <li>Flexbox</li>
+      </ul>
+      <h2 id="homework">Homework</h2>
+      <p>Read David Reinfurt chapter “Touch Start to Begin” (20 minute
+      read) about his experience as a professional designer that
+      designed the Metrocard machines for the New York City subway.</p>
+      <p>Response: Write a short response (1/2 a page) to this reading.
+      What did you find surprising or new to you in Reinfurt’s
+      description of the design of the MTA Metrocard screens? In The
+      Interface Experience what concepts from earlier media theorists,
+      technicians and designers stick out to you that can inform our
+      user interface design work?</p>
+      <h3 id="html-css-practice-1">HTML / CSS practice</h3>
+      <p>Using HTML + CSS, and based off tutorials on HTML, CSS and
+      placement with CSS and flexbox, mock up this Metrocard screen.</p>
+      <figure>
+      <img src="../images/metrocard.jpg" alt="Metrocard interface" />
+      <figcaption aria-hidden="true">Metrocard interface</figcaption>
+      </figure>
+      <p>This is a test in using CSS for colors, fonts, placement.</p>
+      <p>Start by adding all of the elements you need to a HTML
+      page.</p>
+      <p>What things need to be grouped together into a container? Those
+      things should sit in a Div that you specify.</p>
+      <p>Practice specifying sizes.</p>
+      <p>Keep in mind there isn’t a single definitive way to do this
+      assignment. There will be multiple ‘correct’ ways to do this.</p>
+      <p>Struggling and re-trying is an important part of this
+      assignment!</p>
+      <p>New to CSS?: Assume the dimensions of the screen are 600 pixels
+      high by 800 pixels wide.</p>
+      <p>Already experienced with HTML + CSS?: Make sure your screen
+      works for various sizes laptops/browsers (but don’t worry about
+      phone/tablet).</p>
+      <p>Upload your completed page, or post a link to it online (for
+      example: on glitch)</p>
+      <p>Note: I recommend doing this activity after you’ve finished the
+      David Reinfurt reading as he is writing specifically about the
+      design of these screens</p>
+      <p>USEFUL Tutorials:</p>
+      <ul>
+      <li><a href="https://www.w3schools.com/Css/css_boxmodel.asp">CSS
+      Box Model</a></li>
+      <li><a href="http://learnlayout.com/">Learn Layout</a></li>
+      <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+      </ul>
+      <p><em>Sources: Learnability Notes and Hall of Fame/Shame concept
+      CC BY-NC-SA 4.0 adapted from MIT OpenCourseWare 6.831</em></p>
+      <footer> <hr>
+
+<p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>
+
+<p><em>All course content, unless otherwise credited, is by Lee Tusman (c) 2025 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA</a>.</em></p>
+
+<p><a href="#">↑top</a></p> </footer>
+  </body>
+</html>
