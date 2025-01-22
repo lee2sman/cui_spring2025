@@ -108,11 +108,9 @@ Please don't miss our class. We only have one of these a week!
 
 Learning programming is a cumulative effort. More than most other courses each of our classes will build on what you have learned in previous classes. Missing class sets you back in this process. It is important that you attend every class.
 
-Here's my policy: Three absences will lower your grade by one letter. (i.e. an A will became a B). With each additional unexcused absences, the grade will drop an additional unit for each absence. I will take attendance at the beginning of class, often with a brief check-in quiz. If you miss the quiz or are more than 15 minutes late, that is the equivalence of an absence. If there is an emergency or otherwise extenuating circumstance that prevents you from attending class, please email me.
+Here's my policy: Three absences will lower your grade by one letter. (i.e. an A will became a B). With each additional unexcused absences, the grade will drop an additional unit for each absence. I will take attendance at the beginning of class. If there is an emergency or otherwise extenuating circumstance that prevents you from attending class, please email me.
 
 We will be covering critical concepts and working on code and projects in-class and you are responsible for reviewing our class site and reaching out to your peers outside of class time to catch up on what you have missed.
-
-Please see my separate handout on expectations for virtual participation.
 
 ## Philosophy
 
