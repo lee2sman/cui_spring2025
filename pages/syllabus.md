@@ -83,7 +83,7 @@ All students at Purchase College can take advantage of our tutoring services in 
 
 # Homework
 
-All work is to be submitted on time by 11:59pm on the day before our class. I ask for work to be turned in before class so I have time to review it so I know how you are doing. For each day late, your grade will drop a part letter grade.
+All work is to be submitted on time before our class starts each week. I ask for work to be turned in before class so I have time to review it so I know how you are doing. For each day late, your grade will drop a part letter grade.
 
 # Accessiblity Statement
 
