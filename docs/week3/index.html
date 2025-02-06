@@ -25,9 +25,6 @@ the web." />
       <li>Interfaces - theory</li>
       <li>Interface design example: Metrocard Machine</li>
       <li>Learnability</li>
-      <li>User Interface Wall of Fame/Shame</li>
-      <li>HTML and CSS recap</li>
-      <li>buttons</li>
       </ul>
       <h2 id="readings">Readings</h2>
       <blockquote>
@@ -246,64 +243,63 @@ the web." />
       <img src="../images/apple-remote.jpg" alt="apple remote" />
       <figcaption aria-hidden="true">apple remote</figcaption>
       </figure>
-      <h3 id="user-interface-wall-of-fameshame">User Interface Wall of
-      Fame/Shame</h3>
-      <h2 id="html-css-practice">HTML / CSS practice</h2>
-      <p><a href="https://glitch.com/~html-css-basic">Starter code</a>
-      on Glitch.com</p>
-      <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>DOM</li>
-      <li>Placement via css</li>
-      <li>Flexbox</li>
-      </ul>
       <h2 id="homework">Homework</h2>
+      <h3 id="reading-response">Reading Response</h3>
       <p>Read David Reinfurt chapter “Touch Start to Begin” (20 minute
       read) about his experience as a professional designer that
       designed the Metrocard machines for the New York City subway.</p>
       <p>Response: Write a short response (1/2 a page) to this reading.
       What did you find surprising or new to you in Reinfurt’s
-      description of the design of the MTA Metrocard screens? In The
-      Interface Experience what concepts from earlier media theorists,
-      technicians and designers stick out to you that can inform our
-      user interface design work?</p>
-      <h3 id="html-css-practice-1">HTML / CSS practice</h3>
-      <p>Using HTML + CSS, and based off tutorials on HTML, CSS and
-      placement with CSS and flexbox, mock up this Metrocard screen.</p>
-      <figure>
-      <img src="../images/metrocard.jpg" alt="Metrocard interface" />
-      <figcaption aria-hidden="true">Metrocard interface</figcaption>
-      </figure>
-      <p>This is a test in using CSS for colors, fonts, placement.</p>
-      <p>Start by adding all of the elements you need to a HTML
-      page.</p>
-      <p>What things need to be grouped together into a container? Those
-      things should sit in a Div that you specify.</p>
-      <p>Practice specifying sizes.</p>
-      <p>Keep in mind there isn’t a single definitive way to do this
-      assignment. There will be multiple ‘correct’ ways to do this.</p>
-      <p>Struggling and re-trying is an important part of this
-      assignment!</p>
-      <p>New to CSS?: Assume the dimensions of the screen are 600 pixels
-      high by 800 pixels wide.</p>
-      <p>Already experienced with HTML + CSS?: Make sure your screen
-      works for various sizes laptops/browsers (but don’t worry about
-      phone/tablet).</p>
-      <p>Upload your completed page, or post a link to it online (for
-      example: on glitch)</p>
-      <p>Note: I recommend doing this activity after you’ve finished the
-      David Reinfurt reading as he is writing specifically about the
-      design of these screens</p>
-      <p>USEFUL Tutorials:</p>
-      <ul>
-      <li><a href="https://www.w3schools.com/Css/css_boxmodel.asp">CSS
-      Box Model</a></li>
-      <li><a href="http://learnlayout.com/">Learn Layout</a></li>
-      <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
-      </ul>
+      description of the design of the MTA Metrocard screens? In your
+      own words: what was the design methodology (sequence of design)
+      they went through from ideation to implementation, testing, to
+      final public version of the system?</p>
       <p><em>Sources: Learnability Notes and Hall of Fame/Shame concept
       CC BY-NC-SA 4.0 adapted from MIT OpenCourseWare 6.831</em></p>
+      <h3 id="complete-project-1-command-line-interface">Complete
+      project 1: Command Line Interface</h3>
+      <p>Work with a partner to design a Command Line Interface for a
+      program of your choice. You could make music playing software, a
+      countdown timer, a program that reads aloud to the user, a to-do
+      list maker, a meditation app, a sleep machine, or something
+      else.</p>
+      <p>Create a menu by printing out options for the user. Use the
+      select command to run a function based on the user selection.</p>
+      <p>In class we learned you can combine command line software
+      together. In this assignment you should consider what building
+      blocks from BASH you will use to make your software. We can
+      consider gluing these program bits together similar to sticking
+      together lego blocks.</p>
+      <p>Basic script built out of separate program parts:</p>
+      <div class="sourceCode" id="cb1"><pre
+      class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is a comment. Use them!</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;some text&quot;</span> <span class="co"># prints text out</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;some text</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">on two lines&quot;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">read</span> <span class="at">-</span>$ <span class="st">&quot;Enter your name &quot;</span> <span class="va">yourname</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Prompts with &quot;Enter your name&quot; and saves in $yourname</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Don&#39;t forget variables are used starting with $</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">say</span> <span class="st">&quot;something&quot;</span> <span class="co"># speaks text out loud</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">afplay</span> file.mp3 <span class="co"># plays an audio file</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">sleep</span> 10 <span class="co"># sleeps (waits) 10 seconds</span></span></code></pre></div>
+      <p>You are welcome to use other BASH commands and programs as
+      well, along with our starter menu scripts.</p>
+      <p>In addition to a functional piece of software, consider how a
+      prominent title, emojis and/or ascii art could help or hinder your
+      software. How can color help make your interface more useable
+      and/or fun? How can you make the program more discoverable with
+      help?</p>
+      <p>For homework, finish your program, working with your partner on
+      your CLI program, getting the main concept developed along with
+      creating your working program loop. You will likely have a loop
+      that checks for user input, then displays a result based on what
+      the user selects from a menu.</p>
       <footer> <hr>
 
 <p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>
