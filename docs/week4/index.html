@@ -21,19 +21,80 @@ multiple screen sizes" />
       <p><em>Date: 2025-02-12</em></p>
       <h2 id="overview">Overview</h2>
       <ul>
+      <li>intro to HTML content</li>
+      <li>intro to CSS style</li>
       <li>review MTA Metrocard screen</li>
-      <li>practice flexbox</li>
       <li>working with fonts</li>
       <li>responsive design</li>
+      <li>flexbox</li>
       <li>iterative design
       <ul>
       <li>user-centered design</li>
       </ul></li>
-      <li>wireframing + prototyping
-      <ul>
-      <li>paper prototyping</li>
-      </ul></li>
       </ul>
+      <h2 id="html">HTML</h2>
+      <h3 id="content">content</h3>
+      <pre class="html5"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Test page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Title of page&lt;/h1&gt;
+      &lt;h2&gt;Very important subsection&lt;/h2&gt;
+        &lt;h3&gt;A little less important, but still&lt;/h3&gt;
+    &lt;button&gt;Press me&lt;/button&gt;
+    &lt;p&gt;Nothing will happen if you press that button. Sadly, we haven&#39;t hooked up any functionality to it yet.&lt;/p&gt;
+      &lt;h2&gt;Another very important subsection&lt;/h2&gt;
+      &lt;p&gt;A paragraph of text&lt;/p&gt;
+      &lt;p&gt;Another paragraph of text.&lt;/p&gt;
+      &lt;p&gt;This button does something.&lt;/p&gt;
+      &lt;a href=&quot;https://www.kongregate.com/&quot;&gt;&lt;button&gt;ESCAPE&lt;/button&gt;&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <h2 id="css">CSS</h2>
+      <p>Style</p>
+      <p>Color, sizing, placement</p>
+      <h2 id="the-box-model">The Box Model</h2>
+      <figure>
+      <img src="../images/boxmodel.gif" alt="the box model" />
+      <figcaption aria-hidden="true">the box model</figcaption>
+      </figure>
+      <h3 id="color">Color</h3>
+      <div class="sourceCode" id="cb2"><pre
+      class="sourceCode cs"><code class="sourceCode cs"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>body <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* a comment */</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  background<span class="op">-</span>color<span class="op">:</span> lightgrey<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  color<span class="op">:</span> #ffffff<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <h3 id="sizing">sizing</h3>
+      <pre><code>button {
+  width: 50px;
+  margin: 3px;
+  padding: 1em;
+}</code></pre>
+      <h3 id="units">Units</h3>
+      <p>Things that can take sizes: width, margin, padding, font-size,
+      and many more.</p>
+      <p>There are many alternative options for sizing. Many!</p>
+      <p>Some of these include:</p>
+      <ul>
+      <li>px - pixels</li>
+      <li>em - standard width of the current element in font-size (a “M”
+      is the standard letter). 2em is 2 times the current font.</li>
+      <li>rem - similar to above, but is based on the <em>root</em>
+      element.</li>
+      <li>vw - “viewport width” - 1vw is 1% of the width of the page.
+      10vw is 10% of the width of the page.</li>
+      <li>vh - “viewport height” - same as above but for height.</li>
+      </ul>
+      <p>These are only a few of many sizing unit options you can
+      use.</p>
+      <h3 id="placement">Placement</h3>
+      <p>We will address this several ways. Later we will cover flexbox,
+      because it is a flexible box system that works well on multiple
+      screen sizes.</p>
       <h2 id="html-css-practice">HTML / CSS practice</h2>
       <p><a href="https://glitch.com/~html-css-basic">Starter code</a>
       on Glitch.com</p>
