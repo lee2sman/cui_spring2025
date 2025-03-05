@@ -16,7 +16,7 @@
 [Week 6 - User Experience](week6/)  
 2025-02-26  
 
-[Week 7 - UI design patterns](week7/)  
+[Week 7 - A complete application](week7/)  
 2025-03-05  
 
 [Week 8 - Bringing it all together - Complete functional application](week8/)  
