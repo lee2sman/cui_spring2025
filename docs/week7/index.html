@@ -29,235 +29,167 @@ building common UI patterns through UI widgets" />
       competition! Can you finish?</p>
       <p><a href="https://www.youtube.com/watch?v=kxkrdLI6e6M">Dark
       Patterns video</a></p>
-      <h3 id="working-with-fonts-and-icons">Working with Fonts and
-      Icons</h3>
+      <h2 id="overview-1">Overview</h2>
       <ul>
-      <li>HTML</li>
-      <li>CSS Flexbox</li>
-      <li>Google Fonts</li>
-      <li>FontAwesome &lt;– actually, these are icons, despite the
-      name</li>
+      <li>Bringing it all together: a complete functional application
+      and interface, using HTML, CSS and Javascript.</li>
       </ul>
-      <p>We’ll start by creating a basic webpage on Glitch.com</p>
-      <p>We’re going to do some <em>information design</em> and break
-      down our content into logical sections. These sections are what
-      I’m building, but you could have a different amount of sections,
-      or different categories than mine here.</p>
+      <h2 id="scripting-with-jquery">Scripting with jQuery</h2>
+      <p>This class is not meant to be an advanced Javascript scripting
+      course. Other classes including Scripting For The Web cover
+      scripting in much more detail.</p>
+      <p>We are using the jQuery library as a simpler interface to work
+      with Javascript in the browser. This lets us quickly create usable
+      scripts to trigger events and actions in our interfaces.</p>
+      <p>jQuery is a library. It can access and alter the DOM.</p>
+      <p>jQuery provides a beginner-friendly simplified approach to
+      scripting, including a CSS-like selector system. Our scripts can
+      respond to <em>events</em> such as button presses.</p>
+      <h3 id="getting-started-with-jquery">Getting started with
+      jQuery</h3>
+      <p>2 options:</p>
+      <ol type="1">
+      <li>Download the latest jQuery script and add it to your
+      project.</li>
+      <li>Use an online CDN (Content Delivery Network) by linking to a
+      copy of jQuery on a CDN online (at a url).</li>
+      </ol>
+      <p>Use the first option especially for offline apps. Use the
+      second option for speed. A user may have visited a previous site
+      that uses jQuery, so their browser will have cached the site,
+      allowing it to run faster. Additionally, jQuery is hosted on
+      servers around the world, so it should load quickly
+      everywhere.</p>
+      <h3 id="jquery-syntax">jQuery Syntax</h3>
+      <pre><code>$(selector).action();</code></pre>
+      <p>Let’s break this down</p>
+      <p><code>$</code> is the jQuery sign. It tells the browser we are
+      using jQuery to access/alter the page.</p>
+      <p><em>selector</em> is a reference to the html object we want to
+      alter. We can reference html tags, classes, IDs.</p>
+      <p><code>action()</code> here is a reference to a jQuery action.
+      These are builtin actions you can trigger.</p>
+      <p>Examples:</p>
+      <p><code>$("p").hide()</code> will hide all paragraphs on the
+      page.</p>
+      <p><code>$(".header").hide()</code> will hide any element on the
+      page with a .header class.</p>
+      <h5 id="best-practices---document.ready">Best practices -
+      document.ready()</h5>
+      <p>It is best practice to wait to have our jQuery scripts run
+      after all HTML content (such as text, images) has loaded.</p>
+      <p>To do this, we put our script inside a nested ready() event.
+      This means that our pages waits until it’s ready (all content is
+      loaded) before it triggers the rest of our jQuery code to run.</p>
+      <pre><code>$(document).ready(function(){
+  // this is a comment in Javascript/jQuery
+  // jQuery methods go here...
+});</code></pre>
+      <h5 id="jquery-selector-examples">jQuery selector examples</h5>
+      <pre><code>$(&quot;p.intro&quot;);</code></pre>
+      <p>Selects all <code>&lt;p&gt;</code> elements with
+      class=“intro”</p>
+      <pre><code>$(&quot;a[target=&#39;_blank&#39;]&quot;)</code></pre>
+      <p>Selects all <code>&lt;a&gt;</code> elements with a target
+      attribute value equal to “_blank”</p>
+      <p><em>more jQuery selector <a
+      href="https://www.w3schools.com/jquery/jquery_selectors.asp">examples</a></em></p>
+      <h3 id="jquery-events">jQuery Events</h3>
+      <p><strong>Any action a user can do on the page is called an
+      “event.” Our script responds to these user events.</strong></p>
+      <p>Mouse Events:</p>
       <ul>
-      <li>header</li>
-      <li>about</li>
-      <li>values</li>
-      <li>mission</li>
-      <li>contact</li>
+      <li>click</li>
+      <li>dblclick</li>
+      <li>mouseenter</li>
+      <li>mouseleave</li>
       </ul>
-      We’ll start by building out our simple HTML and adding in these
-      needed sections. Here’s just the
-      <body>
-      <p>section.</p>
-      <pre><code>&lt;body&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/body</code></pre>
-      <p>Now I’m going to give them each I.D.’s so I can assign them
-      unique CSS if I’d like to.</p>
-      <pre><code>&lt;body&gt;
-  &lt;div id=&quot;header&quot;&gt;1&lt;/div&gt;
-  &lt;div id=&quot;about&quot;&gt;2&lt;/div&gt;
-  &lt;div id=&quot;values&quot;&gt;3&lt;/div&gt;
-  &lt;div id=&quot;mission&quot;&gt;4&lt;/div&gt;
-  &lt;div id=&quot;contact&quot;&gt;5&lt;/div&gt;
-&lt;/body
-`</code></pre>
-      If I want to make some css that should be applied to each of the
-      <div>
-      <p>s in the body, I could invent a class, and set each div to have
-      that class as well.</p>
-      <p>for example:</p>
-      <pre><code>...
-&lt;div id=&quot;header&quot; class=&quot;section&quot;&gt;1&lt;/div&gt;
-&lt;div id=&quot;about&quot; class=&quot;section&quot;&gt;2&lt;/div&gt;
-...</code></pre>
-      But I’m going to take a different approach. Since each of these
-      <div>
-      s are <em>children</em> of the
-      <body>
-      <p>, I can use a special css indicator that says <em>select all
-      div that are children of the body</em>.</p>
-      <p>It looks ilke this:</p>
-      <pre><code>body &gt; div {
-  width: 100%;
-  min-height: 30vh;
-}</code></pre>
-      <p>Recall that vh stands for <em>viewport units</em>. I specified
-      a minimum height instead of just a height. This will allow the
-      page to scale to different screen sizes.</p>
-      To help me debug, I’ll add a border property so I can properly see
-      the edges of all
-      <div>
-      <p>s normally-invisible css box model.</p>
-      <pre><code>border: solid 1px blue;</code></pre>
-      <h3 id="centering">Centering</h3>
-      <p>We haven’t yet put content in these blocks, but let’s get ready
-      for it by adding CSS to center the content in each div
-      horizontally and vertically. We’ll do this with flexbox.</p>
-      <p>We will set each section to be its own flexbox by adding in
-      <code>display: flex;</code></p>
-      <p>We’ll justify-content to the center.</p>
-      <p>We’ll align-items to the center as well.</p>
-      <pre><code>body &gt; div {
-  width: 100%;
-  min-height: 30vh;
-  border: solid 1px blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}</code></pre>
-      <p>Now we can go in and differentiate our sections with different
-      colors.</p>
-      <p>You can decide your own palette of colors, or visit a website,
-      for example w3Schools <a
-      href="https://www.w3schools.com/colors/colors_palettes.asp">color
-      palettes</a> or <a href="https://coolors.co/">coolors.co</a>.</p>
-      <p>For simplicity and readability, I’m going to use a 4-color
-      pallete: 1 bright stand-out color, 2 subtle background offwhite
-      colors, and black for most text.</p>
-      <p>I start by giving a nice standout color background for the top
-      header, and white to the text, that will contrast nicely. I could
-      also add some font-size styling here as well.</p>
-      <p>I also want the elements inside my header to flow top to
-      bottom, so I’ll add <code>flex-direction: column;</code>. Remember
-      that we set each individual block to be its own flexbox earlier in
-      our CSS.</p>
-      <pre><code>#header {
-  background-color: #4040a1;
-  color: #ffffff;
-  flex-direction: column;
-}</code></pre>
-      <p>For readability’s sake, we will have the rest of the page’s
-      blocks alternate with white values. The background color is white
-      by default, so we only need to pick an offwhite color as well and
-      assign it to the alternating blocks. We’ll create a reusable
-      class.</p>
-      <pre><code>.bg-grey { 
-  background-color: #f6f6f6 
-}</code></pre>
-      <p>And then we can assign it to our alternating blocks inside
-      their div with <code>class="bg-grey"</code>.</p>
-      <p>At this point we have the 5 sections, a header with some
-      content. The top header is a bright color. The rest are
-      alternating between white and grey.</p>
-      <p>Now that we have these differentiated sections, let’s subdivide
-      them further still. We’ll break each of the middle blocks (2, 3
-      and 4) into two sections, made up of an icon on the left, and some
-      text on the right.</p>
-      <p>Let’s assign each of these a class <em>section</em> and place 2
-      divs inside.</p>
-      <p>Example:</p>
-      <pre><code>&lt;div id=&quot;about&quot; class=&quot;section&quot;&gt;
-  &lt;div class=&quot;small-div&quot;&gt;
-    small
-  &lt;/div&gt;    
-  &lt;div class=&quot;big-div&quot;&gt;
-    big
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      <p>We’ll also set the flex-direction of each of their containers
-      to row. <strong>Note that again we didn’t need to set its display
-      to felxbox since we used that trick at the beginning to set all
-      child divs of body to be flexboxs already!</strong></p>
-      <h3 id="fontawesome-icons">Fontawesome icons</h3>
-      <p>You can get started with Font-awesome without having to
-      register.</p>
-      Add the font-awesome stylesheet link in the
-      <head>
-      <p>section before your own stylesheet link.</p>
-      <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot; crossorigin=&quot;anonymous&quot;&gt;</code></pre>
-      <p>Go to the icons section of font-awesome and find an icon that
-      you’d like to use.</p>
-      <p>Copy the class code it gives you. Let’s put it in one of the
-      small-div sections.</p>
-      <p>You’ll see the icon is wayyyyy too small. Let’s add a special
-      class from font-awesome. We can add the class <code>fa-10x</code>
-      to make it 10 times as large. Let’s also add a color, the same as
-      your header background color, to the icon on our css.</p>
-      <h3 id="responsiveness">Responsiveness</h3>
-      <p>Okay, we’re starting to get somewhere, but this won’t look good
-      on small screens yet. We can add <code>flex-wrap: wrap;</code> to
-      our section class so when we’re on a small screen it will bump the
-      next div down.</p>
-      <h3 id="clean-up">Clean-up</h3>
-      <p>Let’s make the details look nice.</p>
-      <p>We can add some padding.</p>
-      <pre><code>.section &gt; div {
-  padding: 30px;
-}</code></pre>
-      <p>Let’s also remove the margin around the body, which is about
-      2pixels by default on most browsers.</p>
-      <pre><code>body {
-  margin: 0;
-}</code></pre>
-      <h3 id="add-some-content">Add some content</h3>
-      <p>At this point I add in more dummy text and icons.</p>
-      <p>I’ll remove the border red line.</p>
-      <p>And our style sucks. It’s really bad and uninviting. Let’s fix
-      our fonts first by looking on Google fonts.</p>
-      We covered how to use Google fonts in a previous class. Remember
-      that you must link to the font’s stylesheet prior to your own
-      stylesheet in the
-      <head>
-      <p>section of your html page.</p>
-      <h2 id="workshop-continuing-iterative-design-process">Workshop:
-      Continuing Iterative Design Process</h2>
-      <h3 id="internal-reviews">Internal reviews</h3>
-      <p>This is done with your own team/collaborators. Fast, find your
-      best goals. Not as favored as independent user interviews.</p>
-      <h3 id="user-interviews">User interviews</h3>
-      <p>Convene at least five interviewees. Ask them questions relating
-      to the design brief. This is considered the most ideal approach to
-      follow when it’s feasible.</p>
-      <p>Example questions: - what challenges do they face? - what do
-      they already use to accomplish that task/activity? - show them
-      prototypes - what do they like/dislike about this plan? - what
-      similar programs do they like? - what would they change?</p>
-      <p>The goal is to gather research/data, then update your design
-      brief.</p>
-      <h3 id="usability-testing">Usability Testing</h3>
-      <p>Now is the time to gather people to test your design. You’ll
-      let them interact with your prototype, by pressing, clicking,
-      potentially “even Wizard of Oz” approaches like we learned about
-      from David Reinfurt’s test of the prototype Metrocard screens.</p>
-      <p>Like our earlier co-designing session it’s best to observe
-      rather than engage in a back-and-forth conversation as you do not
-      want to influence their actions. Ask questions to find out what
-      the user likes, dislikes, finds intuitive, confusing, and whether
-      it meets their needs.</p>
-      <h3 id="refinement-and-building">Refinement and Building</h3>
-      <p>Based on user usability testing you’ll go back to the design
-      and refine it. You made need to do more usability testing.</p>
-      <p>Based on this work it’s time to build the interface by
-      translating your revised prototype into code.</p>
-      <h3 id="user-testing-and-refinement-loop">User Testing (and
-      Refinement) Loop</h3>
-      <p>Like our earlier usability testing, after you’ve built the
-      first version of the interface in code you’ll need to test and
-      observe its use. Based on this you will likely need to do
-      successive layers of building, refinement and testing until you
-      get to a final version everyone is happy with.</p>
-      <h3 id="refinement-and-building-1">Refinement and Building</h3>
-      <p>Based on user usability testing you’ll go back to the design
-      and refine it. You made need to do more usability testing.</p>
-      <p>Based on this work it’s time to build the interface by
-      translating your revised prototype into code.</p>
-      <h3 id="user-testing-and-refinement-loop-1">User Testing (and
-      Refinement) Loop</h3>
-      <p>Like our earlier usability testing, after you’ve built the
-      first version of the interface in code you’ll need to test and
-      observe its use. Based on this you will likely need to do
-      successive layers of building, refinement and testing until you
-      get to a final version everyone is happy with.</p>
+      <p>Key Events:</p>
+      <ul>
+      <li>keypress</li>
+      <li>keydown</li>
+      <li>keyup</li>
+      </ul>
+      <p>Form Events:</p>
+      <ul>
+      <li>submit</li>
+      <li>change</li>
+      <li>focus</li>
+      <li>blur</li>
+      </ul>
+      <p>Window Events:</p>
+      <ul>
+      <li>load</li>
+      <li>resize</li>
+      <li>scroll</li>
+      <li>unload</li>
+      </ul>
+      <h3 id="syntax-for-jquery-events">Syntax for jQuery events</h3>
+      <pre><code>$(&#39;p&#39;).click(function(){
+  //action here occurs when you click on a paragraph
+});</code></pre>
+      <pre><code>$(&quot;#button1&quot;).mouseenter(function(){
+  alert(&quot;You entered id button1!&quot;);
+});</code></pre>
+      <pre><code>$(&quot;input&quot;).focus(function(){
+  $(this).css(&quot;background-color&quot;, &quot;#cccccc&quot;);
+});</code></pre>
+      <p>focus() is used when the user clicks on a form field.</p>
+      <ul>
+      <li>many more jQuery events <a
+      href="https://www.w3schools.com/jquery/jquery_events.asp">examples</a></li>
+      </ul>
+      <h3 id="jquery-resources">jQuery Resources</h3>
+      <ul>
+      <li><a
+      href="https://glitch.com/edit/#!/basic-jquery-starter">Link</a> to
+      my jQuery starter code/site on Glitch.</li>
+      <li>w3Schools jQuery <a
+      href="https://www.w3schools.com/jquery/">tutorial</a></li>
+      <li>jQuery onClick button <a
+      href="https://www.theextremewebdesigns.com/blog/jquery-on-click-event-examples/">examples</a>
+      tutorial</li>
+      </ul>
+      <h2 id="jquery-ui">jQuery UI</h2>
+      <blockquote>
+      <p>jQuery UI is a curated set of user interface interactions,
+      effects, widgets, and themes built on top of the jQuery JavaScript
+      Library.</p>
+      </blockquote>
+      <p><a href="https://jqueryui.com">Link</a></p>
+      <p><strong>Just like jQuery library you will need to make sure you
+      link to jQuery UI library before your own jQuery
+      script.</strong></p>
+      <p><a href="https://jqueryui.com/demos/">Examples</a> for all of
+      the widgets, including</p>
+      <ul>
+      <li>accordions, autocomplete, buttons, checkboxes, radios, date
+      pickers</li>
+      </ul>
+      <h3 id="read">Read</h3>
+      <ul>
+      <li><p>Read and be prepared to talk about <a
+      href="https://www.nytimes.com/2021/03/18/style/loretta-staples-ui-design.html">A
+      Pioneer of Digital Arts Looks Back on a Defining Era</a>: Loretta
+      Staples, a U.I. designer in the 1980s and ’90s, had a front-row
+      seat to the rise of personal computing. - 10 minutes</p></li>
+      <li><p>Read and be prepared to discuss <a
+      href="https://www.interaction-design.org/literature/article/how-to-design-voice-user-interfaces">How
+      to Design a Voice User Interface</a> - 20 minutes</p></li>
+      </ul>
+      <h2 id="homework">Homework</h2>
+      <ul>
+      <li>Read <a
+      href="https://www.robinsloan.com/notes/home-cooked-app/">An App
+      Can Be A Home-Cooked Meal</a> by Robin Sloan.</li>
+      </ul>
+      <h2 id="gui-application---final-due-march-12">GUI application -
+      final (due March 12):</h2>
+      <ol type="1">
+      <li>Include notes, mockup 1, GUI 1, mockup 2, GUI 2</li>
+      <li>Notes from user testing and what you changed</li>
+      <li>Second version of your interface in code (HTML/CSS)</li>
+      </ol>
       <footer> <hr>
 
 <p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>
