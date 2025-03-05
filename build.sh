@@ -174,7 +174,8 @@ function create_feed {
 
     # get individual url
     echo "<link>" >> $site_folder/$feed_name
-    echo $site_url/${file// /-} >> $site_folder/$feed_name
+    oldsuffix=$site_url/${file// /-}
+    echo ${oldsuffix%.md}.html >> $site_folder/$feed_name
     echo "</link>" >> $site_folder/$feed_name
     # use url for guid too
     echo "<guid>" >> $site_folder/$feed_name
