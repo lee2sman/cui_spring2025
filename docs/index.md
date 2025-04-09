@@ -25,10 +25,7 @@
 [Week 9 - Design patterns](week9/)  
 2025-03-19  
 
-[Week 11 - Intro to Voice User Interfaces](week11/)  
-2025-04-02  
-
-[Week 12 - Building a VUI-controlled game](week12/)  
+[Week 11 - Intro to Accessibility](week11/)  
 2025-04-09  
 
 [Week 13 - Machine Learning and facial/gesture recognition for UI](week13/)  
@@ -36,4 +33,7 @@
 
 [Week 14 - Accessibility presentations](week14/)  
 2025-04-23  
+
+[week13](week13/)  
+week13.md  
 
