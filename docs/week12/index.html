@@ -4,126 +4,232 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="date" content="" />
-      <title>Week 12 - Building a VUI-controlled game</title>
+      <title>Week 12 - Accessibility presentations / Intro to
+speculative interfaces</title>
       <link rel="stylesheet" href="../css/../css/main.css" />
 
-      <meta property="og:title" content="Week 12 - Building a
-VUI-controlled game" />
-            <meta property="og:description" content="This week we cover
-a methodology for creating a game controlled via voice user
-interface" />
+      <meta property="og:title" content="Week 12 - Accessibility
+presentations / Intro to speculative interfaces" />
+            <meta property="og:description" content="This week we review
+facial and image recognition, its use for interface design, and privacy
+issues." />
                   <meta property="og:type" content="article" />
   </head>
   <body>
       <header> <nav>
     <p><a href="..">←home</a><br />
 </nav> </footer>
-      <h1>Week 12 - Building a VUI-controlled game</h1>
-      <p><em>Date: 2025-04-09</em></p>
+      <h1>Week 12 - Accessibility presentations / Intro to speculative
+interfaces</h1>
+      <p><em>Date: 2025-04-16</em></p>
       <h2 id="overview">Overview</h2>
       <ul>
-      <li>program a VUI</li>
-      <li>activity: build a VUI game</li>
+      <li>check in</li>
+      <li>presentations: Topics on Accessibility</li>
+      <li>Facial Recognition as UI</li>
+      <li>Gesture Recognition as UI</li>
+      <li>Coding examples with Machine Learning and Teachable
+      Machine</li>
+      <li>Final Project requirements</li>
       </ul>
-      <h2 id="female-assistants">“Female” assistants</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gBlPxpaum6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-      </iframe>
-      <h3 id="the-family-dog">The Family Dog</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/8QYDpbLQ-To" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-      </iframe>
-      <h2 id="building-out-our-voice-user-interfaces">Building out our
-      voice user interfaces</h2>
-      <h3 id="shot-utterance">1-shot utterance</h3>
-      <p>A complete request.</p>
-      <pre><code>Assistant, what&#39;s the weather report for tomorrow?</code></pre>
-      <pre><code>Assistant, add cat food to the grocery list.</code></pre>
-      <h3 id="basic-vui">Basic VUI</h3>
-      <p><a
-      href="https://glitch.com/edit/#!/voice-commands-starter?path=voice-commands.js%3A12%3A18">Hello
-      World code - minimal VUI</a></p>
-      <p><a
-      href="https://glitch.com/edit/#!/purchase-fact-vui?path=voice-commands.js%3A31%3A68">Purchase
-      Facts</a></p>
-      <h3 id="activity-building-a-vui-game">Activity: Building a VUI
-      game</h3>
-      <p>Today we’ll be making a VUI game. Drawing on our previous
-      experience throughout the semester to make text user interfaces,
-      then graphic user interfaces, and now voice user interfaces
-      students will work in teams to create a compelling game playable
-      via voice user interface.</p>
-      <p>Categories: - a quiz game - a choose-your-own-adventure style
-      branching narrative game - a “facts” application - a gambling game
-      - something else!</p>
-      <p>Process:</p>
-      <p>Talk. What are you interested in? What questions do you have?
-      Can you come to an agreement on something you are excited about?
-      What kinds of skills do you have and what will you need to
-      learn?</p>
-      <p>What’s your working process? (Suggestion: Do a flowchart first.
-      Then create a spreadsheet of utterances)</p>
-      <p>Your final game must include:</p>
+      <h2 id="accesibility-presentations">Accesibility
+      presentations</h2>
+      <p>How the blind use technology to see the world</p>
+      <p>Austin Seraphin - <a
+      href="https://www.youtube.com/watch?v=0EQOZRIA-nA">video</a></p>
+      <p>Austin’s <a href="http://austinseraphin.net/">website</a>.</p>
+      <p>Voice User Interfaces - Austin was on the committee for
+      accessibility of these interactive fiction games who has posted a
+      <a href="http://accessibility.iftechfoundation.org/">report</a> on
+      their research.</p>
+      <h2 id="facial-recognition">Facial Recognition</h2>
+      <figure>
+      <img src="../images/facial.png"
+      alt="facial recognition data points tracking" />
+      <figcaption aria-hidden="true">facial recognition data points
+      tracking</figcaption>
+      </figure>
+      <p>How does it work? Five step process:</p>
+      <ol type="1">
+      <li>Facial detection / tracking</li>
+      <li>Facial alignment</li>
+      <li>Feature extraction</li>
+      <li>Feature matching</li>
+      <li>Facial recogntion</li>
+      </ol>
+      <p><img src="../images/facerecognition.webp"
+      alt="Facial recognition in applications" /><br />
+      Facial recognition in application interfaces</p>
+      <h3
+      id="new-facial-recognition-and-machine-learning-interfaces">New
+      facial recognition and machine learning interfaces</h3>
+      <p>Project Euphonia - <em>Helping everyone be understood</em> - <a
+      href="https://www.youtube.com/watch?v=OAdegPmkK-o">video</a> - <a
+      href="https://sites.google.com/view/project-euphonia/">link</a> to
+      project</p>
+      <h1 id="facial-recognition---ethical-concerns">Facial Recognition
+      - ethical concerns</h1>
+      <p>What Facial Recognition Steals From Us - <a
+      href="https://www.youtube.com/watch?v=cc0dqW2HCRc">video</a></p>
+      <blockquote>
+      <p>Human faces evolved to be highly distinctive; it’s helpful to
+      be able to recognize individual members of one’s social group and
+      quickly identify strangers, and that hasn’t changed for hundreds
+      of thousands of years. Then in just the past five years, the
+      meaning of the human face has quietly but seismically shifted.
+      That’s because researchers at Facebook, Google, and other
+      institutions have nearly perfected techniques for automated facial
+      recognition. The result of that research is that your face isn’t
+      just a unique part of your body anymore, it’s biometric data that
+      can be copied an infinite number of times and stored forever. In
+      this video, we explain how facial recognition technology works,
+      where it came from, and what’s at stake. –<em>ReCode, Vox
+      Media</em></p>
+      </blockquote>
+      <h2 id="reading-on-ethical-issues-of-facial-recognition">Reading
+      on ethical issues of facial recognition</h2>
+      <p><img src="../images/shopper.jpg"
+      alt="facial recognition in store" /><br />
+      image modified by ACLU, original by colorblindPicaso on Flickr</p>
       <ul>
-      <li>a playable game!</li>
-      <li>an introduction</li>
-      <li>“help”</li>
-      <li>“credits” - listing everyone involved</li>
-      <li>a way to reset - e.g. “start over”</li>
-      <li>win/lose conditions</li>
-      <li>suggestions for what to do in case the VUI doesn’t understand
-      what someone said</li>
+      <li><a
+      href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2439866">Obscurity
+      and Privacy</a> by Evan Seligner and Woodrow Hartzog, from
+      Routledge Companion to Philosophy of Technology (Joseph Pitt &amp;
+      Ashley Shew, eds., 2014 Forthcoming)<br />
+      </li>
+      <li><a
+      href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3305312">Face
+      Recognition and Privacy in the Age of Augmented Reality</a> by
+      Alessandro Acquisit, Ralph Gross and Frederic Stutzman in the
+      Journal of Privacy and Confidentiality, 6(2), 1, 2014</li>
+      <li><a
+      href="https://www.washingtonpost.com/technology/2019/07/07/fbi-ice-find-state-drivers-license-photos-are-gold-mine-facial-recognition-searches/">FBI
+      and ICE Find State Driver’s License Photos Are a Gold Mine for
+      Facial Recognition Searches</a> in Technology, The Washington
+      Post, September 7, 2019</li>
+      <li><a
+      href="https://www.aclu.org/blog/privacy-technology/surveillance-technologies/are-stores-you-shop-secretly-using-face">Are
+      Stores You Shop at Secretly Using Face Recognition on You?</a> by
+      Jenna Bitar and Jay Stanley, ACLU Blog, March 26, 2018</li>
+      <li><a
+      href="https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html">The
+      Secretive Company That Might End Privacy as We Know It</a> by
+      Kashmir Hill, The New York Times, January 18, 2020</li>
       </ul>
-      <p><strong>Important: to be considered complete each student
-      should include a link to the final project, list your name, and
-      list your collaborators. Address: How does your program work? How
-      did you work collaboratively? (What roles did people take, if
-      any). What challenges did you find? And anything else about the
-      process. 1 to 3 paragraphs</strong></p>
-      <h2 id="homework">Homework</h2>
-      <h2 id="finish-your-collaborative-vui-project">Finish your
-      collaborative VUI project</h2>
-      <p>Due in two weeks!</p>
-      <h3 id="read">Read</h3>
-      <p><a
-      href="https://knowbility.org/blog/2021/what-is-it-like-to-use-a-screen-reader">What’s
-      it Like to Use a Screen Reader</a></p>
-      <p><a
-      href="https://uxdesign.cc/how-to-write-inclusive-accessible-digital-products-2f4b35ec59a2">How
-      to write inclusive, accessible digital products</a></p>
-      <h3 id="accessibility-presentation">Accessibility
-      presentation</h3>
-      <p>Please read the <a href="https://webaim.org/intro">Introduction
-      to Web Accessibility</a></p>
-      <p>This reading focuses on:</p>
+      <h1 id="examples-of-facial-recognition-ui">Examples of Facial
+      Recognition UI</h1>
       <ul>
-      <li>People with Disabilities on the Web</li>
-      <li>Implementing Web Accessibility</li>
-      <li>Principles of Accessible Design</li>
+      <li>How Facial Recognition works at CaixaBank ATMS - <a
+      href="https://www.youtube.com/watch?v=fLRsjktcN_k">video</a></li>
       </ul>
-      <p>Please pick a research topic of interest to you that relates to
-      accessibility and interface, broadly interpreted. Create a 3 - 5
-      minute presentation, no more than 3 - 5 slides, to explain your
-      topic and relevant information.</p>
-      <p>Please pick a unique topic. Examples include:</p>
+      <h1
+      id="coding-examples-with-machine-learning-and-teachable-machine">Coding
+      examples with Machine Learning and Teachable Machine</h1>
+      <p><a href="https://teachablemachine.withgoogle.com/">Teachable
+      Machine</a></p>
+      <h3 id="training-an-image-classification-model">Training an Image
+      Classification Model</h3>
+      <ol type="1">
+      <li>Collect Data</li>
+      </ol>
       <ul>
-      <li>How People with Disabilities use the Web</li>
-      <li>Designing for older users</li>
-      <li>p5js and audio accessibility</li>
-      <li>accessibility and the phone</li>
-      <li>accessibility and interface in the car</li>
-      <li>Best practices for web accessibility</li>
-      <li>Experimental interfaces for accessibility</li>
-      <li>Operating systems and accessibility</li>
-      <li>Video game controllers for accessibility</li>
-      <li>Autism-friendly apps</li>
-      <li>Apple or Windows accessibility elements</li>
-      <li>Design methodologies for working with accessibility
-      issues</li>
-      <li>Accessibility design for smart watches</li>
-      <li>Critiques of social media sites for accessibility</li>
-      <li>How to test whether your website is accessible</li>
-      <li>Another topic distinct from the above</li>
+      <li>Have 2 kinds of images of something</li>
+      <li>Label those images - (these are called “classes”)</li>
+      <li>how many? - experiment. maybe 25 - 50 images per
+      category.</li>
       </ul>
-      <p>Please cite at least 2 sources for your information.</p>
+      <ol start="2" type="1">
+      <li>Click <em>Train Model</em> and <strong>Do not switch
+      tabs</strong> as it is training in the browser live!</li>
+      </ol>
+      <ul>
+      <li>This image classification is using MobileNet and a pretrained
+      model (of a Convolutional Neural Network) to do Transfer
+      Learning</li>
+      </ul>
+      <ol start="3" type="1">
+      <li>When finished, test it. You can add more classes if you like
+      (such as additional poses, or additional images).</li>
+      <li>It’s good? Now we must save by clicking to <em>Export
+      model</em>. Choose Tensorflow.js and choose to export to the
+      Cloud. (In the future, if you don’t want to upload your model to
+      Google’s server you could save locally). You will get a URL and a
+      permanent webpage to use/test/debug/change your model.</li>
+      </ol>
+      <h3 id="example-starter-code">Example starter code</h3>
+      <p><a
+      href="https://editor.p5js.org/2sman/sketches/rtSl0Xmkq">link</a></p>
+      <ol type="1">
+      <li>Change your model url!</li>
+      <li>Edit your triggers.js file!</li>
+      </ol>
+      <h3 id="resources-for-teachable-machine">Resources for Teachable
+      Machine</h3>
+      <ul>
+      <li>Sample javascript code on <a
+      href="https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image">github</a></li>
+      <li>Intro to Teachable Machine for Image Classification - <a
+      href="https://www.youtube.com/watch?v=kwcillcWOg0">video</a> on
+      The Coding Train</li>
+      <li>Tutorial on making a “Snake game” using gesture recognition -
+      <a href="https://www.youtube.com/watch?v=UPgxnGC8oBU">video</a> on
+      The Coding Train</li>
+      </ul>
+      <h2 id="final-project-speculative-interfaces">Final Project:
+      Speculative Interfaces</h2>
+      <h5 id="requirements">requirements</h5>
+      <blockquote>
+      <p>“Where typical design takes a look at small issues, speculative
+      design broadens the scope and tries to tackle the biggest issues
+      in society.” –Anthony Dunne and Fiona Raby, <em>Speculative
+      Everything: Design, Fiction, and Social Dreaming</em></p>
+      </blockquote>
+      <p>Rather than look just at issues of today, speculative design
+      thinking asks “How can we address future challenges with
+      design?”</p>
+      <p>Propose a speculative user interface for an application.
+      Throughout the course of the project you will propose a concept
+      idea and design brief, create prototypes, test, and document and
+      present.</p>
+      <p>Your idea can be practical or fanciful, surprising or
+      challenging. It is an experimental interface, pointing forward to
+      a new future.</p>
+      <p>Keep in mind our design and prototyping processes we’ve covered
+      throughout the semester. You may have to improvise your own new
+      approach for your speculative interface.</p>
+      <p>Consider our readings and learning from throughout the semester
+      including but not limited to: the early history of early interface
+      design, interface metaphors of the desktop, ergonomics, graphical
+      interfaces, accessibility, voice control, speculative
+      thinking.</p>
+      <p>For next week, turn in a Design Brief including: - a. concept
+      stated in a short paragraph. How does it work? What is it for? -
+      b. list of sources - ideas, writing, concepts that are informing
+      your design work (can also include science fiction, games,
+      articles, movies) - c. image references from these sources aka
+      ‘mood board’ or inspiration - d. sketches (paper/pen and/or
+      digital) - e. flowchart of interface - textual and/or visual -
+      f. list of resources (starter code, library, underlying
+      technology)</p>
+      <h3 id="references">References</h3>
+      <ul>
+      <li>This is Not My Beautiful Home - <a
+      href="http://continentcontinent.cc/index.php/continent/article/view/334">essay</a>
+      by Everest Pipkin</li>
+      <li>What is Speculative Design? - <a
+      href="https://www.youtube.com/watch?v=X0MBJ1UxpZ8">video</a></li>
+      <li>Pointing to the future of UI - <a
+      href="https://www.youtube.com/watch?v=b6YTQJVzwlI">video</a></li>
+      <li><em>Her</em> movie - Alien Child - speculative video game - <a
+      href="https://www.youtube.com/watch?v=XAqedT9mukY">video</a></li>
+      <li>Interfacing with devices through silent speech - <a
+      href="https://www.youtube.com/watch?v=RuUSc53Xpeg">video</a></li>
+      <li>Dynamicland Hardware Field trip - <a
+      href="https://www.youtube.com/watch?v=OQpr454yhvM">video</a></li>
+      <li>Virtual Reality Training for Operators - <a
+      href="https://www.youtube.com/watch?v=KYK6wuFaES8">video</a></li>
+      </ul>
       <footer> <hr>
 
 <p><em><a href="https://github.com/lee2sman/cui_spring2025">This site</a> is built using <a href="https://tildegit.org/exquisitecorp/panblog">panblog</a>. Site design by Lee Tusman (c) 2025.</em></p>

@@ -28,12 +28,6 @@
 [Week 11 - Intro to Accessibility](week11/)  
 2025-04-09  
 
-[Week 13 - Machine Learning and facial/gesture recognition for UI](week13/)  
+[Week 12 - Accessibility presentations / Intro to speculative interfaces](week12/)  
 2025-04-16  
-
-[Week 14 - Accessibility presentations](week14/)  
-2025-04-23  
-
-[week13](week13/)  
-week13.md  
 
