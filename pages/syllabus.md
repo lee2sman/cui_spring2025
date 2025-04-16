@@ -240,26 +240,22 @@ week 10 - off
 
 week 11
 
-* Intro to VUI (command line to voice)
-* Design process
-* glossary
-* guidelines
-* playful interfaces
-* "accents" 
-* genderless VUI
-* natural language processing
+* intro to accessibility and interfaces
+* web accessibility overview
+* screen readers
+* user stories
+* WCAG accessibility standards
+* workshop
 
 week 12
 
-* gender and the "voice assistant"
-* utterances
-* vui games - collaborative workshop
+* Accessibility presentations
+* intro to machine vision 
+* ethical issues
+* speculative interfaces
 
 week 13
 
-* VUI due
-* accessibility presentations
-* screen readers
 * facial recognition as UI
 * gesture recognition as UI
 * Machine Learning with Teachable Machine
@@ -267,8 +263,7 @@ week 13
 
 week 14
 
-* VUI presentations
-* speculative interfaces
+* speculative interfaces workshop
 
 week 15
 
@@ -277,5 +272,5 @@ week 15
 final
 
 * speculative interfaces due
-* project presentations + pizza
+* project presentations 
 
