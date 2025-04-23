@@ -31,3 +31,6 @@
 [Week 12 - Accessibility presentations / Intro to speculative interfaces](week12/)  
 2025-04-16  
 
+[Week 13 - Building Speculative Interfaces](week13/)  
+2025-04-22  
+
