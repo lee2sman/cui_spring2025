@@ -34,3 +34,6 @@
 [Week 13 - Building Speculative Interfaces](week13/)  
 2025-04-22  
 
+[Week 14 - Speculative Interface studio](week14/)  
+2025-04-29  
+
